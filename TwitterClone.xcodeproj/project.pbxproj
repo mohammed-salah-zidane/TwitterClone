@@ -45,6 +45,7 @@
 		FA7EC1C02584B95E00B7FD4E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1BF2584B95E00B7FD4E /* Core.framework */; };
 		FA7EC1C42584B95E00B7FD4E /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1C32584B95E00B7FD4E /* Presentation.framework */; };
 		FA8EA2A72585588F001B04E0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1C12584B95E00B7FD4E /* Data.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FAC61D6925CD10C700A12CE1 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC61D6825CD10C700A12CE1 /* Authentication.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		FA7EC1BF2584B95E00B7FD4E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C12584B95E00B7FD4E /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C32584B95E00B7FD4E /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC61D6825CD10C700A12CE1 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 		FA5F881C25CCEF3B002F59C0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FAC61D6525CD10A800A12CE1 /* Auth */,
 				FA5F881D25CCEF3B002F59C0 /* LaunchScreen */,
 			);
 			path = UI;
@@ -304,6 +307,14 @@
 				FA5F881E25CCEF3B002F59C0 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		FAC61D6525CD10A800A12CE1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FAC61D6825CD10C700A12CE1 /* Authentication.storyboard */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC61D6925CD10C700A12CE1 /* Authentication.storyboard in Resources */,
 				FA5F88A425CCEF3B002F59C0 /* Manrope3-Semibold.otf in Resources */,
 				FA5F88A025CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-UltraLight.ttf in Resources */,
 				FA5F889925CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-Black.ttf in Resources */,
