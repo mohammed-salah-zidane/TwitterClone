@@ -15,25 +15,25 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--AuthVC-->
         <scene sceneID="L7Y-WA-PLh">
             <objects>
-                <viewController id="04i-nd-R3b" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthVC" id="04i-nd-R3b" customClass="AuthVC" customModule="TwitterClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oca-2G-nQw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="E6x-fy-7m5">
-                                <rect key="frame" x="144.5" y="121" width="125" height="158"/>
+                                <rect key="frame" x="141.5" y="121" width="131" height="143"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wm0-qy-oEa">
-                                        <rect key="frame" x="30.5" y="0.0" width="64" height="64"/>
+                                        <rect key="frame" x="33.5" y="0.0" width="64" height="64"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3XM-I8-lpi">
-                                        <rect key="frame" x="0.0" y="79" width="125" height="79"/>
+                                        <rect key="frame" x="0.0" y="79" width="131" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6C-1U-418" customClass="DesignableLabel" customModule="Presentation">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yft-tZ-spm" customClass="DesignableLabel" customModule="Presentation">
-                                                <rect key="frame" x="24.5" y="42" width="76" height="37"/>
+                                                <rect key="frame" x="28.5" y="34.5" width="74" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hea-7f-WkC" customClass="DesignableButton" customModule="Presentation">
-                                <rect key="frame" x="27" y="795" width="360" height="40"/>
+                                <rect key="frame" x="27" y="800" width="360" height="35"/>
                                 <color key="backgroundColor" name="Blue"/>
                                 <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="19"/>
                                 <state key="normal" title="Login By Twitter"/>
@@ -89,13 +89,13 @@
     </scenes>
     <designables>
         <designable name="Yft-tZ-spm">
-            <size key="intrinsicContentSize" width="76" height="37"/>
+            <size key="intrinsicContentSize" width="74" height="29.5"/>
         </designable>
         <designable name="f6C-1U-418">
-            <size key="intrinsicContentSize" width="125" height="37"/>
+            <size key="intrinsicContentSize" width="131" height="29.5"/>
         </designable>
         <designable name="hea-7f-WkC">
-            <size key="intrinsicContentSize" width="133" height="40"/>
+            <size key="intrinsicContentSize" width="137" height="35"/>
         </designable>
     </designables>
     <resources>

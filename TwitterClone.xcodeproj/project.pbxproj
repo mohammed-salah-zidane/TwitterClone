@@ -42,6 +42,9 @@
 		FA5F88AB25CCEF3B002F59C0 /* Manrope3-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA5F881825CCEF3B002F59C0 /* Manrope3-Bold.otf */; };
 		FA5F88AE25CCEF3B002F59C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5F881E25CCEF3B002F59C0 /* LaunchScreen.storyboard */; };
 		FA5F8A8525CD0764002F59C0 /* AuthNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F8A8425CD0764002F59C0 /* AuthNavigator.swift */; };
+		FA799D2425CD13F3002729D9 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA799D2325CD13F3002729D9 /* AuthVC.swift */; };
+		FA799D2A25CD140C002729D9 /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA799D2925CD140C002729D9 /* AuthVM.swift */; };
+		FA799D2E25CD141B002729D9 /* AuthVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA799D2D25CD141B002729D9 /* AuthVCBuilder.swift */; };
 		FA7EC1C02584B95E00B7FD4E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1BF2584B95E00B7FD4E /* Core.framework */; };
 		FA7EC1C42584B95E00B7FD4E /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1C32584B95E00B7FD4E /* Presentation.framework */; };
 		FA8EA2A72585588F001B04E0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1C12584B95E00B7FD4E /* Data.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -121,6 +124,9 @@
 		FA5F881F25CCEF3B002F59C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5F888425CCEF3B002F59C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA5F8A8425CD0764002F59C0 /* AuthNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigator.swift; sourceTree = "<group>"; };
+		FA799D2325CD13F3002729D9 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		FA799D2925CD140C002729D9 /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
+		FA799D2D25CD141B002729D9 /* AuthVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVCBuilder.swift; sourceTree = "<group>"; };
 		FA7EC1BF2584B95E00B7FD4E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C12584B95E00B7FD4E /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C32584B95E00B7FD4E /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,10 +315,21 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		FA799D2225CD13C4002729D9 /* AuthVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA799D2325CD13F3002729D9 /* AuthVC.swift */,
+				FA799D2925CD140C002729D9 /* AuthVM.swift */,
+				FA799D2D25CD141B002729D9 /* AuthVCBuilder.swift */,
+			);
+			path = AuthVC;
+			sourceTree = "<group>";
+		};
 		FAC61D6525CD10A800A12CE1 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				FAC61D6825CD10C700A12CE1 /* Authentication.storyboard */,
+				FA799D2225CD13C4002729D9 /* AuthVC */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -533,6 +550,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA799D2A25CD140C002729D9 /* AuthVM.swift in Sources */,
+				FA799D2425CD13F3002729D9 /* AuthVC.swift in Sources */,
 				FA5F889125CCEF3B002F59C0 /* Navigator.swift in Sources */,
 				FA5F888D25CCEF3B002F59C0 /* AppCoordinator.swift in Sources */,
 				FA5F889225CCEF3B002F59C0 /* Assets.swift in Sources */,
@@ -541,6 +560,7 @@
 				FA5F889025CCEF3B002F59C0 /* Coordinator.swift in Sources */,
 				FA5F889725CCEF3B002F59C0 /* Fonts.swift in Sources */,
 				FA5F888C25CCEF3B002F59C0 /* AppLibraries.swift in Sources */,
+				FA799D2E25CD141B002729D9 /* AuthVCBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

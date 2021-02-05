@@ -30,7 +30,7 @@ class AuthNavigator: Navigator {
     func viewController(for destination: Destination, coordinator: Coordinator) -> UIViewController {
         switch destination {
         case .auth:
-            return UIViewController()
+            return AuthVCBuilder.make(coordinator: coordinator)
         }
     }
 }
