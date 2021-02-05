@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gibson-SemiBold.ttf">
+            <string>Gibson-SemiBold</string>
+        </array>
+        <array key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
+        </array>
+        <array key="Karla-Regular.ttf">
+            <string>Karla-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Info Dialog-->
+        <scene sceneID="Vjr-ag-OeA">
+            <objects>
+                <viewController storyboardIdentifier="InfoDialog" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WCj-de-IKc" customClass="InfoDialog" customModule="Presentation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dz4-TX-dFS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jho-rd-d9J">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YA0-mU-GSq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zx-wN-ICB" customClass="DesignableView" customModule="Presentation" customModuleProvider="target">
+                                <rect key="frame" x="25" y="262" width="364" height="372.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-md-pKi">
+                                        <rect key="frame" x="16" y="16" width="332" height="340.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qfM-9t-5sN">
+                                                <rect key="frame" x="0.0" y="0.0" width="332" height="340.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tripCanceledIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MIT-gy-i6a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="332" height="66"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPY-XK-cIw">
+                                                        <rect key="frame" x="0.0" y="90" width="332" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Gibson-SemiBold" family="Gibson" pointSize="20"/>
+                                                        <color key="textColor" name="DarkBlue"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub title with a long detailed message" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoZ-Jf-YEh">
+                                                        <rect key="frame" x="0.0" y="137.5" width="332" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
+                                                        <color key="textColor" name="DarkBlue"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-MV-Hhy">
+                                                        <rect key="frame" x="0.0" y="181.5" width="332" height="87"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condtions Condtions Condtions Condtions Condtions Condtions Condtions Condtions " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RS-T2-PkQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="332" height="40"/>
+                                                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
+                                                                <color key="textColor" name="DarkBlue"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condtions Condtions Condtions Condtions Condtions Condtions Condtions Condtions " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-6m-DI9">
+                                                                <rect key="frame" x="0.0" y="47" width="332" height="40"/>
+                                                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
+                                                                <color key="textColor" name="DarkBlue"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hIT-iT-TyG">
+                                                        <rect key="frame" x="0.0" y="292.5" width="332" height="48"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7i-26-WN2" customClass="DesignableButton" customModule="Presentation" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="158" height="48"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="135" id="pHc-aU-kcU"/>
+                                                                    <constraint firstAttribute="height" constant="48" id="wfI-1Q-7HX"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="18"/>
+                                                                <state key="normal" title="Cancel">
+                                                                    <color key="titleColor" name="Blue"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                        <color key="value" name="WhiteBlue"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="pHc-aU-kcU"/>
+                                                                    </mask>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="cancel:" destination="WCj-de-IKc" eventType="touchUpInside" id="dQg-hv-VEo"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lU0-6E-J7J" customClass="DesignableButton" customModule="Presentation" customModuleProvider="target">
+                                                                <rect key="frame" x="174" y="0.0" width="158" height="48"/>
+                                                                <color key="backgroundColor" name="Blue"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="48" id="rwT-sN-1DC"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="18"/>
+                                                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                                                <state key="normal" title="Submit">
+                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="submit:" destination="WCj-de-IKc" eventType="touchUpInside" id="MpJ-vf-gte"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qfM-9t-5sN" firstAttribute="leading" secondItem="SgN-md-pKi" secondAttribute="leading" id="AU6-rV-LQ3"/>
+                                            <constraint firstAttribute="bottom" secondItem="qfM-9t-5sN" secondAttribute="bottom" id="Ewm-Hy-zMs"/>
+                                            <constraint firstAttribute="trailing" secondItem="qfM-9t-5sN" secondAttribute="trailing" id="Sif-At-7aN"/>
+                                            <constraint firstItem="qfM-9t-5sN" firstAttribute="top" secondItem="SgN-md-pKi" secondAttribute="top" id="VzV-Ad-CMd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="7Gw-mS-hMC"/>
+                                    <constraint firstAttribute="height" constant="250" id="KkT-fX-CxD"/>
+                                    <constraint firstAttribute="trailing" secondItem="SgN-md-pKi" secondAttribute="trailing" constant="16" id="R1Z-rJ-D2N"/>
+                                    <constraint firstItem="SgN-md-pKi" firstAttribute="leading" secondItem="9zx-wN-ICB" secondAttribute="leading" constant="16" id="Uik-KX-GWs"/>
+                                    <constraint firstAttribute="bottom" secondItem="SgN-md-pKi" secondAttribute="bottom" constant="16" id="VEJ-u9-bbQ"/>
+                                    <constraint firstItem="SgN-md-pKi" firstAttribute="top" secondItem="9zx-wN-ICB" secondAttribute="top" constant="16" id="w8Y-Ws-xuN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7Gw-mS-hMC"/>
+                                        <exclude reference="KkT-fX-CxD"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TBy-V2-bwN"/>
+                        <color key="backgroundColor" white="0.004862431879643794" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9zx-wN-ICB" firstAttribute="centerY" secondItem="Dz4-TX-dFS" secondAttribute="centerY" id="60A-6r-5Q8"/>
+                            <constraint firstAttribute="bottom" secondItem="Jho-rd-d9J" secondAttribute="bottom" id="BaS-fo-Fl0"/>
+                            <constraint firstItem="TBy-V2-bwN" firstAttribute="trailing" secondItem="9zx-wN-ICB" secondAttribute="trailing" constant="25" id="J2y-OM-Qvg"/>
+                            <constraint firstItem="Jho-rd-d9J" firstAttribute="top" secondItem="Dz4-TX-dFS" secondAttribute="top" id="Vbp-zd-Z6U"/>
+                            <constraint firstItem="Jho-rd-d9J" firstAttribute="leading" secondItem="TBy-V2-bwN" secondAttribute="leading" id="cet-f0-VIl"/>
+                            <constraint firstItem="9zx-wN-ICB" firstAttribute="leading" secondItem="TBy-V2-bwN" secondAttribute="leading" constant="25" id="nX5-E4-HAs"/>
+                            <constraint firstItem="Jho-rd-d9J" firstAttribute="trailing" secondItem="TBy-V2-bwN" secondAttribute="trailing" id="wLw-MX-J8T"/>
+                            <constraint firstItem="9zx-wN-ICB" firstAttribute="centerX" secondItem="TBy-V2-bwN" secondAttribute="centerX" id="yZ8-k5-p8e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="c7i-26-WN2" id="gOS-9f-Kgb"/>
+                        <outlet property="btnSubmit" destination="lU0-6E-J7J" id="yaX-vf-Gnt"/>
+                        <outlet property="icon" destination="MIT-gy-i6a" id="W2Y-ZJ-zn4"/>
+                        <outlet property="lblDescription" destination="2Cb-6m-DI9" id="gOZ-QJ-6wK"/>
+                        <outlet property="lblSubtitle" destination="GoZ-Jf-YEh" id="ykp-Nu-OHh"/>
+                        <outlet property="lblTitle" destination="DPY-XK-cIw" id="spp-Ym-RVL"/>
+                        <outlet property="lblTitleDescription" destination="3RS-T2-PkQ" id="qXG-Zl-8ko"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2JZ-XC-bBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1959" y="783"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="c7i-26-WN2">
+            <size key="intrinsicContentSize" width="56" height="33"/>
+        </designable>
+        <designable name="lU0-6E-J7J">
+            <size key="intrinsicContentSize" width="58" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="tripCanceledIcon" width="178" height="66"/>
+        <namedColor name="Blue">
+            <color red="0.0080000003799796104" green="0.51800000667572021" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkBlue">
+            <color red="0.1289999932050705" green="0.23100000619888306" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteBlue">
+            <color red="0.20399999618530273" green="0.59200000762939453" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

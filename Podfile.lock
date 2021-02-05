@@ -1,0 +1,119 @@
+PODS:
+  - Alamofire (5.4.0)
+  - Cache (6.0.0)
+  - DropDown (2.3.13)
+  - Imaginary (5.0.0):
+    - Cache (~> 6.0.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - Lightbox (2.5.0):
+    - Imaginary (~> 5.0.0)
+  - ModelsMapper (0.1.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - Nuke (9.2.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - PanModal (1.2.7)
+  - ReachabilitySwift (4.3.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxReachability (1.0.0):
+    - ReachabilitySwift (~> 4.3.1)
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxRequester/Core (0.4.0):
+    - RxSwift (~> 5.0)
+  - RxRequester/Moya (0.4.0):
+    - Moya/RxSwift (~> 14.0.0-beta.5)
+    - RxRequester/Core
+  - RxSwift (5.1.1)
+  - SnapKit (5.0.1)
+  - SwiftGen (6.4.0)
+  - SwiftLint (0.41.0)
+  - SwiftMessages (8.0.3):
+    - SwiftMessages/App (= 8.0.3)
+  - SwiftMessages/App (8.0.3)
+  - SwiftyJSON (5.0.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - DropDown
+  - IQKeyboardManagerSwift
+  - Lightbox
+  - ModelsMapper
+  - Moya/RxSwift
+  - Nuke
+  - NVActivityIndicatorView
+  - PanModal
+  - RxCocoa
+  - RxReachability
+  - RxRequester/Moya
+  - RxSwift
+  - SnapKit
+  - SwiftGen
+  - SwiftLint
+  - SwiftMessages
+  - SwiftyJSON
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cache
+    - DropDown
+    - Imaginary
+    - IQKeyboardManagerSwift
+    - Lightbox
+    - ModelsMapper
+    - Moya
+    - Nuke
+    - NVActivityIndicatorView
+    - PanModal
+    - ReachabilitySwift
+    - RxCocoa
+    - RxReachability
+    - RxRelay
+    - RxRequester
+    - RxSwift
+    - SnapKit
+    - SwiftGen
+    - SwiftLint
+    - SwiftMessages
+    - SwiftyJSON
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Lightbox: cc3d5124f024fa8197fd23f913160db1c61a1852
+  ModelsMapper: 7c7f748889e5583c9c56002d67abb217e01d08e4
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Nuke: 1394e48b0940e01dd20f52ac56b121ab154e370d
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxReachability: 21d3e96f39bc166a21c357e923f47dec148ca97b
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxRequester: fbe7404768d7bb40481ad77b14d04c30961af592
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
+  SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
+  SwiftMessages: 063ec9ffea3ffa7d17ba595157a9ec78e4fe045f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 6894f4ffe263c86296c109ff079b30db0400a8d2
+
+COCOAPODS: 1.10.0
