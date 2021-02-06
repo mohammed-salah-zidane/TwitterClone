@@ -8,6 +8,8 @@
 
 import UIKit
 import Nuke
+import TwitterKit
+import TwitterCore
 
 public class AppLibraries
 {
@@ -16,6 +18,9 @@ public class AppLibraries
     static public func initLibraries(for application: UIApplication,
                               launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil)
     {
+        TWTRTwitter.sharedInstance().start(
+            withConsumerKey: UserDefaultsKey.App.twitterConsumerKey.rawValue,
+            consumerSecret: UserDefaultsKey.App.twitterConsumerSecret.rawValue)
         enableKeyboardManager()
         setupNukeImageManager()
         ReachabilityManger.shared.checkReachability()
@@ -33,7 +38,7 @@ public class AppLibraries
         DataLoader.sharedUrlCache.diskCapacity = 0
         let pipeline = ImagePipeline
         {
-            guard let dataCache = try? DataCache(name: "com.Alamat.Rakeb-captain") else { return }
+            guard let dataCache = try? DataCache(name: "com.zidane.app") else { return }
             dataCache.sizeLimit = 200 * 1024 * 1024
             $0.dataCache = dataCache
         }

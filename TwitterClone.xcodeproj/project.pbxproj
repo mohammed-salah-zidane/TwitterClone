@@ -348,6 +348,7 @@
 				FA24FC8F25848784000A0968 /* Resources */,
 				FA3C71172585F189002014DD /* Embed Frameworks */,
 				2AD07E77D81865772D2822D3 /* [CP] Embed Pods Frameworks */,
+				B52B3A4DC92B65C951551276 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -501,6 +502,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B52B3A4DC92B65C951551276 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E130F23EE986BB753EA1B9F1 /* [CP] Check Pods Manifest.lock */ = {

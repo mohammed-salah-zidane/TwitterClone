@@ -8,7 +8,7 @@
 
 public enum UserDefaultsKey
 {
-   public enum User: String
+    public enum User: String
     {
         case userLocation = "userLocation"
         case currentUser = "current-user"
@@ -24,16 +24,11 @@ public enum UserDefaultsKey
     
     public enum App: String
     {
-        //"AIzaSyBJTwNbw2QXsfdPgWQBoK3Zp4kbORXdtTY" //alada
-        //"AIzaSyBMt1gYV4ebnSmvdMTJlPsuKznmuMZ0Mik" //fr
-        //"AIzaSyBBKY11a522j9BWW04HvjoOzd64wWqjZ90" // rakeb
+        case twitterConsumerKey = "KTgosDXOAelnEnjcMVzSodc5M"
+        case twitterConsumerSecret = "Jme22OsZlk9IR7ORzOzWBjRgHVVwXDChMpzjRaI2vQDNiYGcnC"
         
-        case googleMapsAPIKey = "AIzaSyBBKY11a522j9BWW04HvjoOzd64wWqjZ90"
-
         public var name: String {
             get { "\(rawValue)" }
         }
     }
-    
-    
 }

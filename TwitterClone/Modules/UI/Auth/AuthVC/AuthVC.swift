@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TwitterKit
 
 class AuthVC: BaseWireframe<AuthVM, Coordinator> {
 
@@ -23,13 +24,13 @@ class AuthVC: BaseWireframe<AuthVM, Coordinator> {
 
     }
     
-    //Ovverides
+    //MARK:- Ovverides
     override func bind(viewModel: AuthVM) {
         
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle
-    {
-        return .darkContent
+    //MARK:- Actions
+    @IBAction func logingTapped(_ sender: Any) {
+        
     }
 }

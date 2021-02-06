@@ -13,9 +13,9 @@ def core_pods
   pod 'RxCocoa'
   pod 'Moya/RxSwift'
   pod 'RxRequester/Moya'
-  
   pod 'ModelsMapper'
   pod 'SwiftyJSON'
+  pod 'TwitterKit'
 
 end
 

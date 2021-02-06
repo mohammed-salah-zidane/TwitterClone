@@ -58,14 +58,17 @@
                                 <rect key="frame" x="27" y="800" width="360" height="35"/>
                                 <color key="backgroundColor" name="Blue"/>
                                 <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="19"/>
-                                <state key="normal" title="Login By Twitter"/>
+                                <state key="normal" title="Login"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="fireShadow" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizedTitle" value="Login By Twitter"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="LocalizedTitle" value="Login"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logingTapped:" destination="04i-nd-R3b" eventType="touchUpInside" id="VHj-5l-qHD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vBZ-A7-SpL"/>
@@ -95,7 +98,7 @@
             <size key="intrinsicContentSize" width="131" height="29.5"/>
         </designable>
         <designable name="hea-7f-WkC">
-            <size key="intrinsicContentSize" width="137" height="35"/>
+            <size key="intrinsicContentSize" width="48" height="35"/>
         </designable>
     </designables>
     <resources>
