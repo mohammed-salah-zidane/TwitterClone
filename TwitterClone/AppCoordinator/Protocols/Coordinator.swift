@@ -9,6 +9,7 @@ import UIKit
 
 protocol Coordinator: class {
     var auth: AuthNavigator { get }
+    var home: HomeNavigator { get }
     var childCoordinators: [Coordinator] { get set }
     func backToRoot(coordinator: Coordinator)
     var navigationController: BaseNavigationController { get }

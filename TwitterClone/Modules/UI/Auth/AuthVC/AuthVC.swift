@@ -24,7 +24,7 @@ class AuthVC: BaseWireframe<AuthVM, Coordinator> {
             .drive(onNext:{ [weak self] state in
                 guard let self = self else {return}
                 guard state else {return}
-                NotifiyMessage.shared.notify(message: "Auth Success")
+                self.coordinator.home.navigate(to: .home, with: .root)
             }).disposed(by: disposeBag)
     }
     

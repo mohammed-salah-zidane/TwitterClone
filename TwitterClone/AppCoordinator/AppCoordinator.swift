@@ -17,6 +17,10 @@ class AppCoordinator: NSObject, Coordinator {
         return .init(coordinator: self)
     }()
     
+    lazy var home: HomeNavigator = {
+        return .init(coordinator: self)
+    }()
+    
     lazy var navigationController: BaseNavigationController = {
         let nav  = BaseNavigationController()
         nav.delegate = self

@@ -48,6 +48,11 @@
 		FA7EC1C02584B95E00B7FD4E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1BF2584B95E00B7FD4E /* Core.framework */; };
 		FA7EC1C42584B95E00B7FD4E /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1C32584B95E00B7FD4E /* Presentation.framework */; };
 		FA8EA2A72585588F001B04E0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1C12584B95E00B7FD4E /* Data.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FAAEDB4725CF55EB00648C4C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAEDB4625CF55EB00648C4C /* Home.storyboard */; };
+		FAAEDB4F25CF561000648C4C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB4E25CF561000648C4C /* HomeVC.swift */; };
+		FAAEDB5325CF562000648C4C /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5225CF562000648C4C /* HomeVM.swift */; };
+		FAAEDB5725CF564500648C4C /* HomeVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5625CF564500648C4C /* HomeVCBuilder.swift */; };
+		FAAEDB5B25CF574200648C4C /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5A25CF574200648C4C /* HomeNavigator.swift */; };
 		FAC61D6925CD10C700A12CE1 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC61D6825CD10C700A12CE1 /* Authentication.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +135,11 @@
 		FA7EC1BF2584B95E00B7FD4E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C12584B95E00B7FD4E /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C32584B95E00B7FD4E /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAEDB4625CF55EB00648C4C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		FAAEDB4E25CF561000648C4C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		FAAEDB5225CF562000648C4C /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		FAAEDB5625CF564500648C4C /* HomeVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCBuilder.swift; sourceTree = "<group>"; };
+		FAAEDB5A25CF574200648C4C /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		FAC61D6825CD10C700A12CE1 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5F8A8425CD0764002F59C0 /* AuthNavigator.swift */,
+				FAAEDB5A25CF574200648C4C /* HomeNavigator.swift */,
 			);
 			path = Navigators;
 			sourceTree = "<group>";
@@ -301,6 +312,7 @@
 		FA5F881C25CCEF3B002F59C0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FAAEDB4425CF55CC00648C4C /* Home */,
 				FAC61D6525CD10A800A12CE1 /* Auth */,
 				FA5F881D25CCEF3B002F59C0 /* LaunchScreen */,
 			);
@@ -323,6 +335,25 @@
 				FA799D2D25CD141B002729D9 /* AuthVCBuilder.swift */,
 			);
 			path = AuthVC;
+			sourceTree = "<group>";
+		};
+		FAAEDB4425CF55CC00648C4C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEDB4625CF55EB00648C4C /* Home.storyboard */,
+				FAAEDB4525CF55D800648C4C /* HomeVC */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FAAEDB4525CF55D800648C4C /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEDB4E25CF561000648C4C /* HomeVC.swift */,
+				FAAEDB5225CF562000648C4C /* HomeVM.swift */,
+				FAAEDB5625CF564500648C4C /* HomeVCBuilder.swift */,
+			);
+			path = HomeVC;
 			sourceTree = "<group>";
 		};
 		FAC61D6525CD10A800A12CE1 /* Auth */ = {
@@ -464,6 +495,7 @@
 				FA5F88A825CCEF3B002F59C0 /* Roboto-Black.ttf in Resources */,
 				FA5F88A925CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-Regular.ttf in Resources */,
 				FA5F889B25CCEF3B002F59C0 /* Manrope3-ExtraBold.otf in Resources */,
+				FAAEDB4725CF55EB00648C4C /* Home.storyboard in Resources */,
 				FA5F889825CCEF3B002F59C0 /* Roboto-Medium.ttf in Resources */,
 				FA5F88A525CCEF3B002F59C0 /* Roboto-Bold.ttf in Resources */,
 				FA5F889F25CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-Bold.ttf in Resources */,
@@ -569,14 +601,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA799D2A25CD140C002729D9 /* AuthVM.swift in Sources */,
+				FAAEDB5B25CF574200648C4C /* HomeNavigator.swift in Sources */,
 				FA799D2425CD13F3002729D9 /* AuthVC.swift in Sources */,
 				FA5F889125CCEF3B002F59C0 /* Navigator.swift in Sources */,
+				FAAEDB5325CF562000648C4C /* HomeVM.swift in Sources */,
 				FA5F888D25CCEF3B002F59C0 /* AppCoordinator.swift in Sources */,
 				FA5F889225CCEF3B002F59C0 /* Assets.swift in Sources */,
 				FA5F8A8525CD0764002F59C0 /* AuthNavigator.swift in Sources */,
+				FAAEDB5725CF564500648C4C /* HomeVCBuilder.swift in Sources */,
 				FA5F888B25CCEF3B002F59C0 /* AppDelegate.swift in Sources */,
 				FA5F889025CCEF3B002F59C0 /* Coordinator.swift in Sources */,
 				FA5F889725CCEF3B002F59C0 /* Fonts.swift in Sources */,
+				FAAEDB4F25CF561000648C4C /* HomeVC.swift in Sources */,
 				FA5F888C25CCEF3B002F59C0 /* AppLibraries.swift in Sources */,
 				FA799D2E25CD141B002729D9 /* AuthVCBuilder.swift in Sources */,
 			);
