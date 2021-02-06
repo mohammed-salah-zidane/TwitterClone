@@ -37,14 +37,14 @@ class AppCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        setupAuth()
+        setupRoot(rootVC: isLogedIn ? home.rootViewController : auth.rootViewController )
     }
     
-    func setupAuth() {
+    func setupRoot(rootVC: UIViewController) {
         let nav = BaseNavigationController()
         nav.delegate = self
         navigationController = nav
-        navigationController.viewControllers = [auth.rootViewController]
+        navigationController.viewControllers = [rootVC]
         self.window.rootViewController = navigationController
         self.window.makeKeyAndVisible()
     }
