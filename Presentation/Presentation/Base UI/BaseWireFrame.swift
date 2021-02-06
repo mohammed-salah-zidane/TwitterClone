@@ -58,11 +58,15 @@ open class BaseWireframe<T: ViewModel, Coordinator>: UIViewController {
     }
     
     open func bindStates() {
-        viewModel.displayError.subscribe { (text) in
+        viewModel
+            .displayError
+            .subscribe { (text) in
             NotifiyMessage.shared.toast(toastMessage: text)
         }.disposed(by: disposeBag)
         
-        viewModel.isLoading.subscribe { [weak self] (isLoading) in
+        viewModel
+            .isLoading
+            .subscribe { [weak self] (isLoading) in
             guard let isLoading = isLoading.element else { return }
             self?.loadActivity(isLoading)
         }.disposed(by: disposeBag)

@@ -6,7 +6,8 @@
 //  Copyright © 2020 Alamat. All rights reserved.
 //
 
-import CoreLocation
+import Foundation
+import TwitterKit
 
 public class UserSessionManager: NSObject
 {
@@ -17,29 +18,10 @@ public class UserSessionManager: NSObject
     
     // MARK: Properties
     
-    public var userLocation: PickPoint?{
-        get {
-            AppDefaults.value(forEncoded: UserDefaultsKey.User.userLocation)
-        }
-        set {
-            AppDefaults.save(value: newValue, keyEncoded: UserDefaultsKey.User.userLocation)
-        }
-    }
-    
     public var isSignedIn: Bool
     {
-        guard UserTokenManager.userToken != nil else { return false }
+        guard currentUser != nil else { return false }
         return true
-    }
-    
-    public var captain: Captain?
-    {
-        get {
-            AppDefaults.value(forEncoded: UserDefaultsKey.User.captain)
-        }
-        set {
-            AppDefaults.save(value: newValue, keyEncoded: UserDefaultsKey.User.captain)
-        }
     }
     
     public var currentUser: User?
@@ -53,13 +35,32 @@ public class UserSessionManager: NSObject
         }
     }
     
+    public var users: [User]?
+    {
+        get {
+            AppDefaults.value(forEncoded: UserDefaultsKey.User.multiUsers)
+        }
+        
+        set {
+            AppDefaults.save(value: newValue, keyEncoded: UserDefaultsKey.User.multiUsers)
+        }
+    }
+    
     // MARK: Methods
+    
+    public func appendUser(user: User) {
+        self.users?.append(user)
+    }
+    
+    public func removeUser(user: User) {
+        let filteredUsers = self.users?.filter({$0.id != user.id})
+        self.users = filteredUsers
+    }
     
     public func signOut()
     {
-        guard captain != nil else { return }
+        guard currentUser != nil else { return }
         currentUser = nil
-        captain = nil
         removeUserData()
     }
     
@@ -67,6 +68,9 @@ public class UserSessionManager: NSObject
     
     private func removeUserData()
     {
-        UserTokenManager.resetUserSession()
+        let store = TWTRTwitter.sharedInstance().sessionStore
+        if let userID = store.session()?.userID {
+            store.logOutUserID(userID)
+        }
     }
 }

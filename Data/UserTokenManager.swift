@@ -16,20 +16,7 @@ public class UserTokenManager: NSObject
     static public var userToken: String? {
         let key = UserDefaultsKey.User.token.name
         let token = UserDefaults.standard.string(forKey: key)
-        //#warning("Just for test")
         return token
-    }
-    
-    static public var deviceToken: String? {
-        let key = UserDefaultsKey.User.deviceToken.name
-        let token = UserDefaults.standard.string(forKey: key)
-        return token
-    }
-    
-    static public func addDeviceToken(_ token: String) {
-        let key = UserDefaultsKey.User.deviceToken.name
-        UserDefaults.standard.set(token, forKey: key)
-        UserDefaults.standard.synchronize()
     }
     
     static public func addUserToken(_ token: String) {
@@ -40,11 +27,9 @@ public class UserTokenManager: NSObject
     
     static public func resetUserSession() {
         let tokenKey = UserDefaultsKey.User.token.name
-        let deviceKey = UserDefaultsKey.User.deviceToken.name
         let userkey = UserDefaultsKey.User.currentUser.name
         UserDefaults.standard.removeObject(forKey: userkey)
         UserDefaults.standard.removeObject(forKey: tokenKey)
-        UserDefaults.standard.removeObject(forKey: deviceKey)
         UserDefaults.standard.synchronize()
     }
 }

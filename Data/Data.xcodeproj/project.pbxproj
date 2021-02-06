@@ -3,41 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		554C120C4569B419AEF85885 /* Pods_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8660D6C1B79E6FA727CE519 /* Pods_Data.framework */; };
-		FA0DCA8A25AF4993009675E9 /* HomeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DCA8925AF4993009675E9 /* HomeRequests.swift */; };
-		FA0DCA8E25AF4C9B009675E9 /* HomeResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DCA8D25AF4C9B009675E9 /* HomeResponses.swift */; };
-		FA2575D625C02FF30053D810 /* SupportRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2575D525C02FF30053D810 /* SupportRequest.swift */; };
 		FA3C711F2585F286002014DD /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8EA28C258557E2001B04E0 /* Core.framework */; };
 		FA3C748F25864934002014DD /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C748D25864933002014DD /* AppDefaults.swift */; };
 		FA3C749025864934002014DD /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C748E25864933002014DD /* UserDefaultsKey.swift */; };
 		FA3C749E258649D1002014DD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C749D258649D1002014DD /* DataManager.swift */; };
 		FA3C74A4258649FA002014DD /* LaodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74A3258649FA002014DD /* LaodType.swift */; };
-		FA3C74B825864B24002014DD /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74B325864B24002014DD /* Directions.swift */; };
-		FA3C74BF25864BAA002014DD /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74BE25864BAA002014DD /* Map.swift */; };
 		FA3C74CF25864D7A002014DD /* Moya+Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74CB25864D7A002014DD /* Moya+Provider.swift */; };
 		FA3C74D025864D7A002014DD /* Single+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74CC25864D7A002014DD /* Single+Request.swift */; };
 		FA3C74D125864D7A002014DD /* AppRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74CD25864D7A002014DD /* AppRequester.swift */; };
 		FA3C74DF25865803002014DD /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74DE25865803002014DD /* ApiConstants.swift */; };
-		FA52A92125C1885E003980C9 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52A92025C1885E003980C9 /* About.swift */; };
-		FA784D7D25B0756800466B52 /* FirebaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA784D7C25B0756800466B52 /* FirebaseModels.swift */; };
 		FA784DC925B0788100466B52 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA784DC825B0788100466B52 /* EncodableExtensions.swift */; };
-		FA7BAD1525B9B9F100539265 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7BAD1425B9B9F100539265 /* Car.swift */; };
 		FA7EBF4C258491CE00B7FD4E /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EBF42258491CE00B7FD4E /* Data.framework */; };
 		FA7EBF51258491CE00B7FD4E /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EBF50258491CE00B7FD4E /* DataTests.swift */; };
 		FA7EBF53258491CE00B7FD4E /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = FA7EBF45258491CE00B7FD4E /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAFA42C125A4A7D500D2F376 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42C025A4A7D500D2F376 /* AuthAPI.swift */; };
-		FAFA42C725A4A82500D2F376 /* AuthRemoteDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42C625A4A82500D2F376 /* AuthRemoteDataSrc.swift */; };
 		FAFA42CB25A4A83D00D2F376 /* AuthRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42CA25A4A83D00D2F376 /* AuthRepo.swift */; };
 		FAFA42CF25A4A89400D2F376 /* AuthResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42CE25A4A89400D2F376 /* AuthResponses.swift */; };
 		FAFA42D325A4A8B200D2F376 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42D225A4A8B200D2F376 /* BaseResponse.swift */; };
 		FAFA42D725A4A8F600D2F376 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42D625A4A8F600D2F376 /* UserModel.swift */; };
-		FAFA42DD25A4AB2700D2F376 /* AuthRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42DC25A4AB2700D2F376 /* AuthRequests.swift */; };
 		FAFA431F25A4B33000D2F376 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA431E25A4B33000D2F376 /* NetworkError.swift */; };
-		FAFA43A325A4BC0500D2F376 /* TripModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA43A225A4BC0500D2F376 /* TripModels.swift */; };
 		FAFBAB0725A1F40F00EF8F82 /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBAB0525A1F40F00EF8F82 /* UserSessionManager.swift */; };
 		FAFBAB0825A1F40F00EF8F82 /* UserTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBAB0625A1F40F00EF8F82 /* UserTokenManager.swift */; };
 		FAFBAB5625A2169200EF8F82 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBAB5525A2169200EF8F82 /* Environments.swift */; };
@@ -58,23 +46,15 @@
 		2D04DEC5705CF8F40C92B98E /* Pods-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.debug.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.debug.xcconfig"; sourceTree = "<group>"; };
 		3BD48FD6BA5B4368E15164C6 /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
 		C8660D6C1B79E6FA727CE519 /* Pods_Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA0DCA8925AF4993009675E9 /* HomeRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequests.swift; sourceTree = "<group>"; };
-		FA0DCA8D25AF4C9B009675E9 /* HomeResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponses.swift; sourceTree = "<group>"; };
-		FA2575D525C02FF30053D810 /* SupportRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportRequest.swift; sourceTree = "<group>"; };
 		FA3C748D25864933002014DD /* AppDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
 		FA3C748E25864933002014DD /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		FA3C749D258649D1002014DD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FA3C74A3258649FA002014DD /* LaodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaodType.swift; sourceTree = "<group>"; };
-		FA3C74B325864B24002014DD /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
-		FA3C74BE25864BAA002014DD /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		FA3C74CB25864D7A002014DD /* Moya+Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Moya+Provider.swift"; sourceTree = "<group>"; };
 		FA3C74CC25864D7A002014DD /* Single+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+Request.swift"; sourceTree = "<group>"; };
 		FA3C74CD25864D7A002014DD /* AppRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequester.swift; sourceTree = "<group>"; };
 		FA3C74DE25865803002014DD /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
-		FA52A92025C1885E003980C9 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		FA784D7C25B0756800466B52 /* FirebaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModels.swift; sourceTree = "<group>"; };
 		FA784DC825B0788100466B52 /* EncodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
-		FA7BAD1425B9B9F100539265 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		FA7EBF42258491CE00B7FD4E /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EBF45258491CE00B7FD4E /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		FA7EBF46258491CE00B7FD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,15 +63,11 @@
 		FA7EBF52258491CE00B7FD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8EA28C258557E2001B04E0 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8EA29925855813001B04E0 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAFA42C025A4A7D500D2F376 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
-		FAFA42C625A4A82500D2F376 /* AuthRemoteDataSrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDataSrc.swift; sourceTree = "<group>"; };
 		FAFA42CA25A4A83D00D2F376 /* AuthRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepo.swift; sourceTree = "<group>"; };
 		FAFA42CE25A4A89400D2F376 /* AuthResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponses.swift; sourceTree = "<group>"; };
 		FAFA42D225A4A8B200D2F376 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		FAFA42D625A4A8F600D2F376 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		FAFA42DC25A4AB2700D2F376 /* AuthRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequests.swift; sourceTree = "<group>"; };
 		FAFA431E25A4B33000D2F376 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		FAFA43A225A4BC0500D2F376 /* TripModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModels.swift; sourceTree = "<group>"; };
 		FAFBAB0525A1F40F00EF8F82 /* UserSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
 		FAFBAB0625A1F40F00EF8F82 /* UserTokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTokenManager.swift; sourceTree = "<group>"; };
 		FAFBAB5525A2169200EF8F82 /* Environments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
@@ -176,10 +152,6 @@
 		FA3C749A25864999002014DD /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				FA3C74BE25864BAA002014DD /* Map.swift */,
-				FAFA42DC25A4AB2700D2F376 /* AuthRequests.swift */,
-				FA0DCA8925AF4993009675E9 /* HomeRequests.swift */,
-				FA2575D525C02FF30053D810 /* SupportRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -187,14 +159,8 @@
 		FA3C749B258649A4002014DD /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				FA3C74B325864B24002014DD /* Directions.swift */,
 				FAFA42CE25A4A89400D2F376 /* AuthResponses.swift */,
 				FAFA42D225A4A8B200D2F376 /* BaseResponse.swift */,
-				FAFA43A225A4BC0500D2F376 /* TripModels.swift */,
-				FA0DCA8D25AF4C9B009675E9 /* HomeResponses.swift */,
-				FA784D7C25B0756800466B52 /* FirebaseModels.swift */,
-				FA7BAD1425B9B9F100539265 /* Car.swift */,
-				FA52A92025C1885E003980C9 /* About.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -269,8 +235,6 @@
 		FAFA42BF25A4A7B300D2F376 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				FAFA42C025A4A7D500D2F376 /* AuthAPI.swift */,
-				FAFA42C625A4A82500D2F376 /* AuthRemoteDataSrc.swift */,
 				FAFA42CA25A4A83D00D2F376 /* AuthRepo.swift */,
 			);
 			path = Auth;
@@ -449,33 +413,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3C74DF25865803002014DD /* ApiConstants.swift in Sources */,
-				FAFA42C725A4A82500D2F376 /* AuthRemoteDataSrc.swift in Sources */,
 				FAFA42CB25A4A83D00D2F376 /* AuthRepo.swift in Sources */,
 				FAFBAB0825A1F40F00EF8F82 /* UserTokenManager.swift in Sources */,
 				FA784DC925B0788100466B52 /* EncodableExtensions.swift in Sources */,
-				FAFA42C125A4A7D500D2F376 /* AuthAPI.swift in Sources */,
 				FAFA42CF25A4A89400D2F376 /* AuthResponses.swift in Sources */,
-				FAFA43A325A4BC0500D2F376 /* TripModels.swift in Sources */,
 				FA3C749025864934002014DD /* UserDefaultsKey.swift in Sources */,
-				FA0DCA8A25AF4993009675E9 /* HomeRequests.swift in Sources */,
-				FA7BAD1525B9B9F100539265 /* Car.swift in Sources */,
-				FA52A92125C1885E003980C9 /* About.swift in Sources */,
 				FAFA431F25A4B33000D2F376 /* NetworkError.swift in Sources */,
 				FA3C749E258649D1002014DD /* DataManager.swift in Sources */,
 				FAFA42D725A4A8F600D2F376 /* UserModel.swift in Sources */,
 				FA3C748F25864934002014DD /* AppDefaults.swift in Sources */,
 				FA3C74D025864D7A002014DD /* Single+Request.swift in Sources */,
 				FAFBAB5625A2169200EF8F82 /* Environments.swift in Sources */,
-				FA784D7D25B0756800466B52 /* FirebaseModels.swift in Sources */,
-				FA0DCA8E25AF4C9B009675E9 /* HomeResponses.swift in Sources */,
 				FA3C74A4258649FA002014DD /* LaodType.swift in Sources */,
-				FAFA42DD25A4AB2700D2F376 /* AuthRequests.swift in Sources */,
-				FA2575D625C02FF30053D810 /* SupportRequest.swift in Sources */,
 				FA3C74D125864D7A002014DD /* AppRequester.swift in Sources */,
-				FA3C74BF25864BAA002014DD /* Map.swift in Sources */,
 				FA3C74CF25864D7A002014DD /* Moya+Provider.swift in Sources */,
 				FAFA42D325A4A8B200D2F376 /* BaseResponse.swift in Sources */,
-				FA3C74B825864B24002014DD /* Directions.swift in Sources */,
 				FAFBAB0725A1F40F00EF8F82 /* UserSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

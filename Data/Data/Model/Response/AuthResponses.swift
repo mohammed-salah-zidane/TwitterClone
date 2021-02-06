@@ -13,12 +13,6 @@ public struct ConfirmModel:Codable
     public let success :Bool
 }
 
-public struct VerifyCodeResponse:Codable
-{
-    public let token : String
-    public let user : User
-}
-
 public struct SimpleItem: Codable {
     public var id: Int
     public var name: String

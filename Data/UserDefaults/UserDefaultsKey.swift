@@ -10,10 +10,8 @@ public enum UserDefaultsKey
 {
     public enum User: String
     {
-        case userLocation = "userLocation"
+        case multiUsers = "multiUsers"
         case currentUser = "current-user"
-        case captain = "captain"
-        case car = "captain-car"
         case token = "token"
         case deviceToken = "deviceToken"
         

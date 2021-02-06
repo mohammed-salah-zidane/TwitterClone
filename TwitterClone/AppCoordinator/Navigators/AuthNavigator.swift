@@ -18,11 +18,6 @@ class AuthNavigator: Navigator {
         self.coordinator = coordinator
     }
     
-    private var isCompletedProfile: Bool?
-    {
-        return UserSessionManager.shared.currentUser?.completedProfile ?? nil
-    }
-    
     var rootViewController: UIViewController {
         return viewController(for: .auth, coordinator: coordinator)
     }

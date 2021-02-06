@@ -33,7 +33,7 @@ public final class NotifiyMessage
         }
     }
     
-    public func notify(title:String = "Rakeb team".localized, message:String , icon:UIImage? = nil, buttonTitle:String = "", _ completionHandler: @escaping CompletionHandler = {}){
+    public func notify(title:String = "Twitter team".localized, message:String , icon:UIImage? = nil, buttonTitle:String = "Ok".localized, _ completionHandler: @escaping CompletionHandler = {}){
         let messageView: MessageView = MessageView.viewFromNib(layout: .centeredView)
         
         messageView.configureBackgroundView(width: UIScreen.main.bounds.width * 0.8)
