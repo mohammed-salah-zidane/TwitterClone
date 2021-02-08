@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import TwitterKit
 
 class AuthVC: BaseWireframe<AuthVM, Coordinator> {
     
@@ -18,6 +17,13 @@ class AuthVC: BaseWireframe<AuthVM, Coordinator> {
     
     //MARK:- Ovverides
     override func bind(viewModel: AuthVM) {
+        viewModel
+            .isLoading
+            .asDriver(onErrorJustReturn: false)
+            .drive(onNext:{ state in
+                state ? LoadingView.show() : LoadingView.hide()
+            }).disposed(by: disposeBag)
+        
         viewModel
             .auth
             .asDriver(onErrorJustReturn: false)

@@ -16,9 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="hDK-ri-5Xc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Bv-7j-CRO" customClass="PagedTableView" customModule="Presentation">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="E51-iI-d16"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Bv-7j-CRO" firstAttribute="leading" secondItem="hDK-ri-5Xc" secondAttribute="leading" id="0lo-tP-10Q"/>
+                            <constraint firstAttribute="trailing" secondItem="5Bv-7j-CRO" secondAttribute="trailing" id="CPN-ot-FDZ"/>
+                            <constraint firstItem="5Bv-7j-CRO" firstAttribute="top" secondItem="E51-iI-d16" secondAttribute="top" id="MCC-QZ-Tew"/>
+                            <constraint firstAttribute="bottom" secondItem="5Bv-7j-CRO" secondAttribute="bottom" id="aYL-UJ-24S"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="5Bv-7j-CRO" id="OlO-aw-jHg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMG-4z-k2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

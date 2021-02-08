@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TwitterKit
+import OAuthSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,9 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         open url: URL,
         options: [UIApplication.OpenURLOptionsKey : Any] = [:]
     ) -> Bool {
-        if TWTRTwitter.sharedInstance().application(app, open: url, options: options) {
-            return true
-        }
+        OAuthSwift.handle(url: url)
         return true
     }
 }

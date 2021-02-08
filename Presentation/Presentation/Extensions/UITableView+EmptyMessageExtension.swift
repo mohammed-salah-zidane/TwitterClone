@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
 
     func setEmptyMessage(_ message: String)
     {

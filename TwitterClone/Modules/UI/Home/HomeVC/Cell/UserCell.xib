@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArbFONTS-DINNextLTArabic-Medium.ttf">
+            <string>DINNextLTArabic-Medium</string>
+        </array>
+        <array key="ArbFONTS-DINNextLTArabic-Regular.ttf">
+            <string>DINNextLTArabic-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="UserCell" customModule="TwitterClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="410" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qXm-fJ-aYm" customClass="DesignableImageView" customModule="Presentation">
+                        <rect key="frame" x="17" y="10" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="api-L0-8dY"/>
+                            <constraint firstAttribute="height" constant="80" id="gjB-0M-H9C"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="circleCorner" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="Cloudy"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QRs-IU-OD2">
+                        <rect key="frame" x="107" y="10" width="293" height="108"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aPr-dK-WIR">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk9-NY-I4N">
+                                        <fontDescription key="fontDescription" name="DINNextLTArabic-Medium" family="DIN Next LT Arabic" pointSize="17"/>
+                                        <color key="textColor" name="BlackLight"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqU-Ji-wIh">
+                                        <rect key="frame" x="0.0" y="5" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="16"/>
+                                        <color key="textColor" name="BlackLight"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIZ-u6-LwW">
+                                <rect key="frame" x="0.0" y="108" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="16"/>
+                                <color key="textColor" name="BlackLight"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QRs-IU-OD2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="a2p-Ac-LWX"/>
+                    <constraint firstAttribute="bottom" secondItem="QRs-IU-OD2" secondAttribute="bottom" constant="10" id="fdg-Y3-tZ6"/>
+                    <constraint firstItem="qXm-fJ-aYm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="heb-Ka-0Rk"/>
+                    <constraint firstItem="QRs-IU-OD2" firstAttribute="leading" secondItem="qXm-fJ-aYm" secondAttribute="trailing" constant="10" id="lAQ-Tn-nDa"/>
+                    <constraint firstItem="qXm-fJ-aYm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="nvI-RJ-nAZ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qXm-fJ-aYm" secondAttribute="bottom" constant="10" id="pL6-lX-QCL"/>
+                    <constraint firstAttribute="trailing" secondItem="QRs-IU-OD2" secondAttribute="trailing" constant="10" id="tDs-C9-Mia"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img_Avatar" destination="qXm-fJ-aYm" id="tww-mz-0Za"/>
+                <outlet property="lbl_Bio" destination="bIZ-u6-LwW" id="p4R-w2-J0O"/>
+                <outlet property="lbl_Handle" destination="lqU-Ji-wIh" id="Ix8-3d-6Ss"/>
+                <outlet property="lbl_Name" destination="kk9-NY-I4N" id="Bf8-jS-Mlj"/>
+            </connections>
+            <point key="canvasLocation" x="42.028985507246382" y="119.86607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BlackLight">
+            <color red="0.25900000333786011" green="0.25900000333786011" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cloudy">
+            <color red="0.0" green="0.73299998044967651" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

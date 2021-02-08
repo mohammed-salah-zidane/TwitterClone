@@ -7,13 +7,13 @@
 //
 
 
-import Foundation
+import RxSwift
 
 public class UserTokenManager: NSObject
 {
     private override init() { super.init() }
     
-    static public var userToken: String? {
+    static public var accessToken: String? {
         let key = UserDefaultsKey.User.token.name
         let token = UserDefaults.standard.string(forKey: key)
         return token
@@ -26,10 +26,6 @@ public class UserTokenManager: NSObject
     }
     
     static public func resetUserSession() {
-        let tokenKey = UserDefaultsKey.User.token.name
-        let userkey = UserDefaultsKey.User.currentUser.name
-        UserDefaults.standard.removeObject(forKey: userkey)
-        UserDefaults.standard.removeObject(forKey: tokenKey)
-        UserDefaults.standard.synchronize()
+        AppDefaults.clearValue(for: .token)
     }
 }

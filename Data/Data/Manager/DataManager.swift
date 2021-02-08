@@ -13,4 +13,8 @@ public class DataManager {
     public lazy var authRepo: AuthRepo = {
         AuthRepo.create()
     }()
+    
+    public lazy var homeRepo: HomeRepo = {
+        HomeRepo.create()
+    }()
 }

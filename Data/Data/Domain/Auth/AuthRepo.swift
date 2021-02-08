@@ -6,46 +6,54 @@
 //
 import RxSwift
 import RxCocoa
-import TwitterKit
+import Moya
+import OAuthSwift
+import SwiftyJSON
 
 public class AuthRepo {
     
-    public init() {
-        
+    public let remoteDataSrc: AuthRemoteDataSrc
+    public lazy var oauthManager: OAuth1Swift = {
+        OAuth1Swift(
+            consumerKey: UserDefaultsKey.App.twitterConsumerKey.rawValue,
+            consumerSecret: UserDefaultsKey.App.twitterConsumerSecret.rawValue,
+            requestTokenUrl: ApiConstants.requestTokenURL,
+            authorizeUrl: ApiConstants.authorizeURL,
+            accessTokenUrl: ApiConstants.accessTokenURL)
+    }()
+    
+    public init(remote: AuthRemoteDataSrc) {
+        self.remoteDataSrc = remote
     }
     
-    public func requestAuth() -> Observable<Result<String,NetworkError>> {
-        return Observable<Result<String,NetworkError>>
+    public func requestAccessToken() -> Single<String> {
+        remoteDataSrc.requestAccessToken().map { response in
+            return response.accessToken ?? ""
+        }
+    }
+    
+    public func requestAuth() -> Observable<Result<AuthResponse,NetworkError>> {
+        return Observable<Result<AuthResponse,NetworkError>>
             .create { observer -> Disposable in
-                TWTRTwitter
-                    .sharedInstance()
-                    .logIn { (session, error) in
-                        guard error == nil else {
-                            observer.onNext(.failure(.errorMessage(text: error?.asAFError?.localizedDescription ?? "Failed to auth")))
-                            return
+                self.oauthManager
+                    .authorize(
+                        withCallbackURL: ApiConstants.twitterCallBackURL
+                    ) { (result) in
+                        switch result {
+                        case .success((let credentails, _, let paramters)):
+                            do {
+                                let paramtersJson = JSON(paramters)
+                                var authResponse = try JSONDecoder().decode(AuthResponse.self, from: paramtersJson.rawData())
+                                authResponse.oauthToken = credentails.oauthRefreshToken
+                                observer.onNext(.success(authResponse))
+                            }catch {
+                                print(error)
+                            }
+                        case .failure:
+                            break
                         }
-                        guard let userId = session?.userID, !userId.isEmpty else {
-                            return
-                        }
-                        observer.onNext(.success(userId))
                     }
                 
-                return Disposables.create()
-            }
-    }
-    
-    public func loadUser(with id: String) -> Observable<Result<User,NetworkError>> {
-        return Observable<Result<User,NetworkError>>
-            .create { observer -> Disposable in
-                let twitterClient = TWTRAPIClient(userID: id)
-                twitterClient.loadUser(withID: id) {(user, error) in
-                    guard error == nil else {
-                        observer.onNext(.failure(.errorMessage(text: error?.asAFError?.localizedDescription ?? "Failed to auth")))
-                        return
-                    }
-                    let currentUser = User(id: id, avatar: user?.profileImageURL, name: user?.name, screenName: user?.screenName)
-                    observer.onNext(.success(currentUser))
-                }
                 return Disposables.create()
             }
     }
@@ -53,6 +61,8 @@ public class AuthRepo {
 
 extension AuthRepo {
     public static func create() -> AuthRepo {
-        AuthRepo()
+        let homeAPI: MoyaProvider<AuthAPI> = MoyaProviderBuilder.makeProvider()
+        let authRemoteDataSrc = AuthRemoteDataSrc(api: homeAPI)
+        return AuthRepo(remote: authRemoteDataSrc)
     }
 }

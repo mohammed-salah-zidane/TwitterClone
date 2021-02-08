@@ -17,10 +17,19 @@
 		FA3C74D025864D7A002014DD /* Single+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74CC25864D7A002014DD /* Single+Request.swift */; };
 		FA3C74D125864D7A002014DD /* AppRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74CD25864D7A002014DD /* AppRequester.swift */; };
 		FA3C74DF25865803002014DD /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C74DE25865803002014DD /* ApiConstants.swift */; };
+		FA5F57F825D0BF6500D57D41 /* HomeRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F57F525D0BF6500D57D41 /* HomeRepo.swift */; };
+		FA5F57F925D0BF6500D57D41 /* HomeRemoteDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F57F625D0BF6500D57D41 /* HomeRemoteDataSrc.swift */; };
+		FA5F57FA25D0BF6500D57D41 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5F57F725D0BF6500D57D41 /* HomeAPI.swift */; };
 		FA784DC925B0788100466B52 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA784DC825B0788100466B52 /* EncodableExtensions.swift */; };
 		FA7EBF4C258491CE00B7FD4E /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EBF42258491CE00B7FD4E /* Data.framework */; };
 		FA7EBF51258491CE00B7FD4E /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EBF50258491CE00B7FD4E /* DataTests.swift */; };
 		FA7EBF53258491CE00B7FD4E /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = FA7EBF45258491CE00B7FD4E /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FADAC99F25D0C08E008D0ADD /* FollowersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC99E25D0C08E008D0ADD /* FollowersRequest.swift */; };
+		FADAC9A325D0C510008D0ADD /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC9A225D0C510008D0ADD /* AuthAPI.swift */; };
+		FADAC9A725D0C742008D0ADD /* AuthRemoteDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC9A625D0C742008D0ADD /* AuthRemoteDataSrc.swift */; };
+		FADAC9BA25D11CF7008D0ADD /* HeadersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC9B925D11CF7008D0ADD /* HeadersHelper.swift */; };
+		FADAC9BE25D11F6B008D0ADD /* AccessTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC9BD25D11F6B008D0ADD /* AccessTokenResponse.swift */; };
+		FADACB2325D14077008D0ADD /* FollowersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADACB2225D14077008D0ADD /* FollowersResponse.swift */; };
 		FAFA42CB25A4A83D00D2F376 /* AuthRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42CA25A4A83D00D2F376 /* AuthRepo.swift */; };
 		FAFA42CF25A4A89400D2F376 /* AuthResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42CE25A4A89400D2F376 /* AuthResponses.swift */; };
 		FAFA42D325A4A8B200D2F376 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA42D225A4A8B200D2F376 /* BaseResponse.swift */; };
@@ -54,6 +63,9 @@
 		FA3C74CC25864D7A002014DD /* Single+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+Request.swift"; sourceTree = "<group>"; };
 		FA3C74CD25864D7A002014DD /* AppRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequester.swift; sourceTree = "<group>"; };
 		FA3C74DE25865803002014DD /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		FA5F57F525D0BF6500D57D41 /* HomeRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepo.swift; sourceTree = "<group>"; };
+		FA5F57F625D0BF6500D57D41 /* HomeRemoteDataSrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSrc.swift; sourceTree = "<group>"; };
+		FA5F57F725D0BF6500D57D41 /* HomeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		FA784DC825B0788100466B52 /* EncodableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
 		FA7EBF42258491CE00B7FD4E /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EBF45258491CE00B7FD4E /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
@@ -63,6 +75,12 @@
 		FA7EBF52258491CE00B7FD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8EA28C258557E2001B04E0 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8EA29925855813001B04E0 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FADAC99E25D0C08E008D0ADD /* FollowersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersRequest.swift; sourceTree = "<group>"; };
+		FADAC9A225D0C510008D0ADD /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		FADAC9A625D0C742008D0ADD /* AuthRemoteDataSrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDataSrc.swift; sourceTree = "<group>"; };
+		FADAC9B925D11CF7008D0ADD /* HeadersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersHelper.swift; sourceTree = "<group>"; };
+		FADAC9BD25D11F6B008D0ADD /* AccessTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenResponse.swift; sourceTree = "<group>"; };
+		FADACB2225D14077008D0ADD /* FollowersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersResponse.swift; sourceTree = "<group>"; };
 		FAFA42CA25A4A83D00D2F376 /* AuthRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepo.swift; sourceTree = "<group>"; };
 		FAFA42CE25A4A89400D2F376 /* AuthResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponses.swift; sourceTree = "<group>"; };
 		FAFA42D225A4A8B200D2F376 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -127,6 +145,7 @@
 		FA3C749725864978002014DD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FA5F57F425D0BF6500D57D41 /* Home */,
 				FAFA42BF25A4A7B300D2F376 /* Auth */,
 			);
 			path = Domain;
@@ -152,6 +171,7 @@
 		FA3C749A25864999002014DD /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				FADAC99E25D0C08E008D0ADD /* FollowersRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -161,6 +181,8 @@
 			children = (
 				FAFA42CE25A4A89400D2F376 /* AuthResponses.swift */,
 				FAFA42D225A4A8B200D2F376 /* BaseResponse.swift */,
+				FADAC9BD25D11F6B008D0ADD /* AccessTokenResponse.swift */,
+				FADACB2225D14077008D0ADD /* FollowersResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -182,8 +204,19 @@
 				FA3C74CC25864D7A002014DD /* Single+Request.swift */,
 				FA3C74CD25864D7A002014DD /* AppRequester.swift */,
 				FAFA431E25A4B33000D2F376 /* NetworkError.swift */,
+				FADAC9B925D11CF7008D0ADD /* HeadersHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA5F57F425D0BF6500D57D41 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA5F57F525D0BF6500D57D41 /* HomeRepo.swift */,
+				FA5F57F625D0BF6500D57D41 /* HomeRemoteDataSrc.swift */,
+				FA5F57F725D0BF6500D57D41 /* HomeAPI.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FA7EBF38258491CE00B7FD4E = {
@@ -236,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				FAFA42CA25A4A83D00D2F376 /* AuthRepo.swift */,
+				FADAC9A625D0C742008D0ADD /* AuthRemoteDataSrc.swift */,
+				FADAC9A225D0C510008D0ADD /* AuthAPI.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -282,7 +317,6 @@
 				FA7EBF3E258491CE00B7FD4E /* Sources */,
 				FA7EBF3F258491CE00B7FD4E /* Frameworks */,
 				FA7EBF40258491CE00B7FD4E /* Resources */,
-				CC065BC3AC547EFEF31F107E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,23 +400,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CC065BC3AC547EFEF31F107E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Data/Pods-Data-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Data/Pods-Data-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Data/Pods-Data-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DE4C77C003D4244780A5A015 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,18 +431,27 @@
 			files = (
 				FA3C74DF25865803002014DD /* ApiConstants.swift in Sources */,
 				FAFA42CB25A4A83D00D2F376 /* AuthRepo.swift in Sources */,
+				FADAC9A725D0C742008D0ADD /* AuthRemoteDataSrc.swift in Sources */,
 				FAFBAB0825A1F40F00EF8F82 /* UserTokenManager.swift in Sources */,
 				FA784DC925B0788100466B52 /* EncodableExtensions.swift in Sources */,
 				FAFA42CF25A4A89400D2F376 /* AuthResponses.swift in Sources */,
+				FADAC9BE25D11F6B008D0ADD /* AccessTokenResponse.swift in Sources */,
 				FA3C749025864934002014DD /* UserDefaultsKey.swift in Sources */,
 				FAFA431F25A4B33000D2F376 /* NetworkError.swift in Sources */,
+				FADAC9A325D0C510008D0ADD /* AuthAPI.swift in Sources */,
+				FA5F57FA25D0BF6500D57D41 /* HomeAPI.swift in Sources */,
 				FA3C749E258649D1002014DD /* DataManager.swift in Sources */,
 				FAFA42D725A4A8F600D2F376 /* UserModel.swift in Sources */,
+				FA5F57F925D0BF6500D57D41 /* HomeRemoteDataSrc.swift in Sources */,
+				FADACB2325D14077008D0ADD /* FollowersResponse.swift in Sources */,
 				FA3C748F25864934002014DD /* AppDefaults.swift in Sources */,
 				FA3C74D025864D7A002014DD /* Single+Request.swift in Sources */,
 				FAFBAB5625A2169200EF8F82 /* Environments.swift in Sources */,
+				FADAC9BA25D11CF7008D0ADD /* HeadersHelper.swift in Sources */,
 				FA3C74A4258649FA002014DD /* LaodType.swift in Sources */,
+				FA5F57F825D0BF6500D57D41 /* HomeRepo.swift in Sources */,
 				FA3C74D125864D7A002014DD /* AppRequester.swift in Sources */,
+				FADAC99F25D0C08E008D0ADD /* FollowersRequest.swift in Sources */,
 				FA3C74CF25864D7A002014DD /* Moya+Provider.swift in Sources */,
 				FAFA42D325A4A8B200D2F376 /* BaseResponse.swift in Sources */,
 				FAFBAB0725A1F40F00EF8F82 /* UserSessionManager.swift in Sources */,

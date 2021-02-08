@@ -5,12 +5,12 @@
 	<key>Debug</key>
 	<dict>
 		<key>backendUrl</key>
-		<string>https://www.rakeb.app/api/dev/v1/</string>
+		<string>https://api.twitter.com/</string>
 	</dict>
 	<key>Release</key>
 	<dict>
 		<key>backendUrl</key>
-		<string>https://www.rakeb.app/api/dev/v1/</string>
+		<string>https://api.twitter.com/</string>
 	</dict>
 </dict>
 </plist>

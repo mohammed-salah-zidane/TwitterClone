@@ -22,8 +22,8 @@ public enum UserDefaultsKey
     
     public enum App: String
     {
-        case twitterConsumerKey = "KTgosDXOAelnEnjcMVzSodc5M"
-        case twitterConsumerSecret = "Jme22OsZlk9IR7ORzOzWBjRgHVVwXDChMpzjRaI2vQDNiYGcnC"
+        case twitterConsumerKey = "X0IeQidcXoVCB4wNAClGj7WH3"
+        case twitterConsumerSecret = "ycyTHe5EowxAbyIlSSMkU0zlAleAB4HsAKKKz3S8lRJtMTMcJC"
         
         public var name: String {
             get { "\(rawValue)" }

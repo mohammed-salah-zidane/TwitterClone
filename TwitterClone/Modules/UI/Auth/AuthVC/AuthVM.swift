@@ -26,6 +26,7 @@ class AuthVM: ViewModel
     }
 }
 
+//MARK:- Network
 extension AuthVM {
     func authRequest() {
         dataManager
@@ -33,8 +34,11 @@ extension AuthVM {
             .requestAuth()
             .subscribe { [weak self] result in
                 switch result {
-                case .success(let id):
-                    self?.loadUser(userId: id)
+                case .success(let auth):
+                    let user = User(id: auth.userID, screenName: auth.screenName)
+                    UserSessionManager.shared.currentUser = user
+                    UserSessionManager.shared.appendUser(user: user)
+                    self?.requestNewAccess()
                 case .failure(let error):
                     self?.handleError(error: error)
                 }
@@ -43,23 +47,17 @@ extension AuthVM {
             }.disposed(by: disposeBag)
     }
     
-    func loadUser(userId: String) {
+    func requestNewAccess() {
         self.isLoading.onNext(true)
         dataManager
             .authRepo
-            .loadUser(with: userId)
-            .subscribe { [weak self] result in
+            .requestAccessToken()
+            .subscribe(onSuccess: {[weak self] token in
                 self?.isLoading.onNext(false)
-                switch result {
-                case .success(let user):
-                    UserSessionManager.shared.currentUser = user
-                    UserSessionManager.shared.appendUser(user: user)
-                    self?.auth.onNext(true)
-                case .failure(let error):
-                    self?.handleError(error: error)
-                }
-            } onError: {[weak self] error in
+                UserTokenManager.addUserToken(token)
+                self?.auth.onNext(true)
+            }, onError: {[weak self] error in
                 self?.handleError(error: error)
-            }.disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
 }

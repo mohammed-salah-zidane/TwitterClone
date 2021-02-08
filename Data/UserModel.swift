@@ -10,7 +10,10 @@ import Foundation
 public struct User: Codable
 {
     public var id: String?
-    public var avatar : String?
-    public var name : String?
     public var screenName : String?
+    
+    public init(id: String? = nil, screenName: String? = nil) {
+        self.id = id
+        self.screenName = screenName
+    }
 }

@@ -8,19 +8,15 @@
 
 import UIKit
 import Nuke
-import TwitterKit
-import TwitterCore
 
 public class AppLibraries
 {
     private init() { }
     
-    static public func initLibraries(for application: UIApplication,
-                              launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil)
-    {
-        TWTRTwitter.sharedInstance().start(
-            withConsumerKey: UserDefaultsKey.App.twitterConsumerKey.rawValue,
-            consumerSecret: UserDefaultsKey.App.twitterConsumerSecret.rawValue)
+    static public func initLibraries(
+        for application: UIApplication,
+        launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+    ){
         enableKeyboardManager()
         setupNukeImageManager()
         ReachabilityManger.shared.checkReachability()

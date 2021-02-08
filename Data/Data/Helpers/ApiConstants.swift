@@ -3,8 +3,10 @@
 //
 
 import Foundation
-import Core
 
-class ApiConstants {
-    static let GoogleMap_BASE_URL = "https://maps.googleapis.com/maps/api/"
+public class ApiConstants {
+    static public let requestTokenURL = "\(Environments.shared.baseURL)oauth/request_token"
+    static public let authorizeURL = "\(Environments.shared.baseURL)oauth/authorize"
+    static public let accessTokenURL = "\(Environments.shared.baseURL)oauth/access_token"
+    static public let twitterCallBackURL = "twittter-clone://oauth-callback/twitter"
 }

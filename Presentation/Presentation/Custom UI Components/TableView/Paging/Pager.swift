@@ -9,6 +9,8 @@ public class Pager {
     weak var tableView: PagedTableView!
     var loadMore: ((_ next: Int) -> Void)!
     var pageKeyType: PageKeyType = .paged
+    var withScrollButton = false
+    var withRefresher = false
     
     public class Builder {
         private let pager: Pager = Pager()
@@ -28,10 +30,23 @@ public class Pager {
         public func build() -> Pager {
             pager
         }
+        
+        public func withScrollButton() -> Builder {
+            pager.withScrollButton = true
+            return self
+        }
+        
+        public func withRefresher() -> Builder {
+            pager.withRefresher = true
+            return self
+        }
     }
     
     public func start(reset: Bool = true) {
         tableView.start(reset: reset)
+        if withScrollButton {
+            tableView.buildScrollButton()
+        }
     }
 
     public func notifyItemsLoaded(count: Int) {

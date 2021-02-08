@@ -8,9 +8,16 @@
 import Foundation
 
 
-public struct ConfirmModel:Codable
+public struct AuthResponse:Codable
 {
-    public let success :Bool
+    public var oauthToken, userID, oauthTokenSecret, screenName: String?
+
+    enum CodingKeys: String, CodingKey {
+        case oauthToken = "oauth_token"
+        case userID = "user_id"
+        case oauthTokenSecret = "oauth_token_secret"
+        case screenName = "screen_name"
+    }
 }
 
 public struct SimpleItem: Codable {

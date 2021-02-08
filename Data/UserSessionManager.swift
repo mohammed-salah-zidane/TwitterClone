@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import TwitterKit
 
 public class UserSessionManager: NSObject
 {
@@ -61,16 +60,5 @@ public class UserSessionManager: NSObject
     {
         guard currentUser != nil else { return }
         currentUser = nil
-        removeUserData()
-    }
-    
-    // MARK: Private Methods
-    
-    private func removeUserData()
-    {
-        let store = TWTRTwitter.sharedInstance().sessionStore
-        if let userID = store.session()?.userID {
-            store.logOutUserID(userID)
-        }
     }
 }

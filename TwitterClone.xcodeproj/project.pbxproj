@@ -53,6 +53,9 @@
 		FAAEDB5325CF562000648C4C /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5225CF562000648C4C /* HomeVM.swift */; };
 		FAAEDB5725CF564500648C4C /* HomeVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5625CF564500648C4C /* HomeVCBuilder.swift */; };
 		FAAEDB5B25CF574200648C4C /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5A25CF574200648C4C /* HomeNavigator.swift */; };
+		FAAEDBB325CFDEFE00648C4C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDBB125CFDEFE00648C4C /* UserCell.swift */; };
+		FAAEDBB425CFDEFE00648C4C /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAEDBB225CFDEFE00648C4C /* UserCell.xib */; };
+		FAAEDBB825CFE19D00648C4C /* HomeDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDBB725CFE19D00648C4C /* HomeDataSrc.swift */; };
 		FAC61D6925CD10C700A12CE1 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC61D6825CD10C700A12CE1 /* Authentication.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +143,9 @@
 		FAAEDB5225CF562000648C4C /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		FAAEDB5625CF564500648C4C /* HomeVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCBuilder.swift; sourceTree = "<group>"; };
 		FAAEDB5A25CF574200648C4C /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
+		FAAEDBB125CFDEFE00648C4C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		FAAEDBB225CFDEFE00648C4C /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		FAAEDBB725CFE19D00648C4C /* HomeDataSrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSrc.swift; sourceTree = "<group>"; };
 		FAC61D6825CD10C700A12CE1 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -349,11 +355,22 @@
 		FAAEDB4525CF55D800648C4C /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				FAAEDB6425CF5C6E00648C4C /* Cell */,
 				FAAEDB4E25CF561000648C4C /* HomeVC.swift */,
 				FAAEDB5225CF562000648C4C /* HomeVM.swift */,
 				FAAEDB5625CF564500648C4C /* HomeVCBuilder.swift */,
+				FAAEDBB725CFE19D00648C4C /* HomeDataSrc.swift */,
 			);
 			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		FAAEDB6425CF5C6E00648C4C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEDBB125CFDEFE00648C4C /* UserCell.swift */,
+				FAAEDBB225CFDEFE00648C4C /* UserCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FAC61D6525CD10A800A12CE1 /* Auth */ = {
@@ -379,7 +396,6 @@
 				FA24FC8F25848784000A0968 /* Resources */,
 				FA3C71172585F189002014DD /* Embed Frameworks */,
 				2AD07E77D81865772D2822D3 /* [CP] Embed Pods Frameworks */,
-				B52B3A4DC92B65C951551276 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -486,6 +502,7 @@
 				FA5F88AE25CCEF3B002F59C0 /* LaunchScreen.storyboard in Resources */,
 				FA5F88A225CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-Medium.ttf in Resources */,
 				FA5F88A725CCEF3B002F59C0 /* Roboto-Thin.ttf in Resources */,
+				FAAEDBB425CFDEFE00648C4C /* UserCell.xib in Resources */,
 				FA5F889A25CCEF3B002F59C0 /* Roboto-Light.ttf in Resources */,
 				FA5F889E25CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-Heavy.ttf in Resources */,
 				FA5F88A325CCEF3B002F59C0 /* Manrope3-Thin.otf in Resources */,
@@ -534,23 +551,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B52B3A4DC92B65C951551276 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TwitterClone/Pods-TwitterClone-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E130F23EE986BB753EA1B9F1 /* [CP] Check Pods Manifest.lock */ = {
@@ -608,6 +608,8 @@
 				FA5F888D25CCEF3B002F59C0 /* AppCoordinator.swift in Sources */,
 				FA5F889225CCEF3B002F59C0 /* Assets.swift in Sources */,
 				FA5F8A8525CD0764002F59C0 /* AuthNavigator.swift in Sources */,
+				FAAEDBB825CFE19D00648C4C /* HomeDataSrc.swift in Sources */,
+				FAAEDBB325CFDEFE00648C4C /* UserCell.swift in Sources */,
 				FAAEDB5725CF564500648C4C /* HomeVCBuilder.swift in Sources */,
 				FA5F888B25CCEF3B002F59C0 /* AppDelegate.swift in Sources */,
 				FA5F889025CCEF3B002F59C0 /* Coordinator.swift in Sources */,

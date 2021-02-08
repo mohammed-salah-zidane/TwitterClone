@@ -17,6 +17,7 @@ PODS:
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
+  - OAuthSwift (2.1.0)
   - PanModal (1.2.7)
   - ReachabilitySwift (4.3.1)
   - RxCocoa (5.1.1):
@@ -42,9 +43,6 @@ PODS:
   - SwiftMessages/App (8.0.3)
   - SwiftyJSON (5.0.0)
   - Toast-Swift (5.0.1)
-  - TwitterCore (3.2.0)
-  - TwitterKit (3.4.2):
-    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - DropDown
@@ -54,6 +52,7 @@ DEPENDENCIES:
   - Moya/RxSwift
   - Nuke
   - NVActivityIndicatorView
+  - OAuthSwift
   - PanModal
   - RxCocoa
   - RxReachability
@@ -65,7 +64,6 @@ DEPENDENCIES:
   - SwiftMessages
   - SwiftyJSON
   - Toast-Swift
-  - TwitterKit
 
 SPEC REPOS:
   trunk:
@@ -79,6 +77,7 @@ SPEC REPOS:
     - Moya
     - Nuke
     - NVActivityIndicatorView
+    - OAuthSwift
     - PanModal
     - ReachabilitySwift
     - RxCocoa
@@ -92,8 +91,6 @@ SPEC REPOS:
     - SwiftMessages
     - SwiftyJSON
     - Toast-Swift
-    - TwitterCore
-    - TwitterKit
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
@@ -106,6 +103,7 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Nuke: 1394e48b0940e01dd20f52ac56b121ab154e370d
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  OAuthSwift: ab1675598273e04355e0282459c328e65c9ddacd
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -119,9 +117,7 @@ SPEC CHECKSUMS:
   SwiftMessages: 063ec9ffea3ffa7d17ba595157a9ec78e4fe045f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
-  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
-  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 371d4ee6ca8deccd4be7ff6912067092e1e92a9a
+PODFILE CHECKSUM: f0691938851c39ab02d594c921d2ae34956e1835
 
 COCOAPODS: 1.10.0

@@ -15,8 +15,6 @@ def core_pods
   pod 'RxRequester/Moya'
   pod 'ModelsMapper'
   pod 'SwiftyJSON'
-  pod 'TwitterKit'
-
 end
 
 
@@ -49,6 +47,7 @@ end
 #data module
 def data_pods
   core_pods
+  pod 'OAuthSwift'
 end
 
 target 'Data' do
@@ -67,6 +66,7 @@ end
 target 'TwitterClone' do
   app_pods
   presentation_pods
+  pod 'OAuthSwift'
   
 #  target 'TwitterCloneTests' do
 #    test_pods
