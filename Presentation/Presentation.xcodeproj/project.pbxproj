@@ -56,6 +56,7 @@
 		FA7EC0C62584B08200B7FD4E /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EC0C22584B08200B7FD4E /* Icons.swift */; };
 		FA7EC0C72584B08200B7FD4E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EC0C32584B08200B7FD4E /* Colors.swift */; };
 		FA7EC0E82584B20700B7FD4E /* UIFont+ extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EC0D82584B20700B7FD4E /* UIFont+ extension.swift */; };
+		FAAC8EEB25D26B42002BC1E2 /* NavDropMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC8EEA25D26B42002BC1E2 /* NavDropMenu.swift */; };
 		FAAEDB9A25CF5D6000648C4C /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB9525CF5D6000648C4C /* ConfigurableCell.swift */; };
 		FAB646EF25A4D51800776781 /* PresentationSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB646EE25A4D51800776781 /* PresentationSegues.swift */; };
 		FAB646F325A4D6C700776781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB646F225A4D6C700776781 /* Assets.xcassets */; };
@@ -170,6 +171,7 @@
 		FA7EC0D82584B20700B7FD4E /* UIFont+ extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+ extension.swift"; sourceTree = "<group>"; };
 		FA8EA291258557F4001B04E0 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8EA296258557FF001B04E0 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAC8EEA25D26B42002BC1E2 /* NavDropMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDropMenu.swift; sourceTree = "<group>"; };
 		FAAEDB9525CF5D6000648C4C /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		FAB646EE25A4D51800776781 /* PresentationSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationSegues.swift; sourceTree = "<group>"; };
 		FAB646F225A4D6C700776781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 		FA7EC0402584AE7600B7FD4E /* Custom UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				FAAC8EE925D26AE7002BC1E2 /* NavDropMenu */,
 				FAAEDB8F25CF5D5F00648C4C /* TableView */,
 				FAF0A25125B7221B0069AE2B /* ValidationTextField */,
 				FAFAFE0E25A5DCCA00F282A2 /* Pickers */,
@@ -472,6 +475,14 @@
 				FAB6470125A4DE2600776781 /* Roboto-Thin.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		FAAC8EE925D26AE7002BC1E2 /* NavDropMenu */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC8EEA25D26B42002BC1E2 /* NavDropMenu.swift */,
+			);
+			path = NavDropMenu;
 			sourceTree = "<group>";
 		};
 		FAAEDB8F25CF5D5F00648C4C /* TableView */ = {
@@ -758,6 +769,7 @@
 				FA7EC08C2584AE7700B7FD4E /* PagedTableView.swift in Sources */,
 				FA3C73BA258637C8002014DD /* EXString.swift in Sources */,
 				FA0532F425A9D1DC003FE335 /* ReachabilityManager.swift in Sources */,
+				FAAC8EEB25D26B42002BC1E2 /* NavDropMenu.swift in Sources */,
 				FA7EC0962584AE7700B7FD4E /* UITableView+EmptyMessageExtension.swift in Sources */,
 				FA7EC0B92584AF8800B7FD4E /* ZoomHelper.swift in Sources */,
 				FAFAFD3325A5D52F00F282A2 /* DateHelper.swift in Sources */,

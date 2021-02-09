@@ -36,9 +36,7 @@ extension AuthVM {
                 switch result {
                 case .success(let auth):
                     let user = User(id: auth.userID, screenName: auth.screenName)
-                    UserSessionManager.shared.currentUser = user
-                    UserSessionManager.shared.appendUser(user: user)
-                    self?.requestNewAccess()
+                    self?.requestNewAccess(user: user)
                 case .failure(let error):
                     self?.handleError(error: error)
                 }
@@ -47,7 +45,7 @@ extension AuthVM {
             }.disposed(by: disposeBag)
     }
     
-    func requestNewAccess() {
+    func requestNewAccess(user: User) {
         self.isLoading.onNext(true)
         dataManager
             .authRepo
@@ -55,6 +53,9 @@ extension AuthVM {
             .subscribe(onSuccess: {[weak self] token in
                 self?.isLoading.onNext(false)
                 UserTokenManager.addUserToken(token)
+                let account = Account(user: user, accessToken: token)
+                UserSessionManager.shared.appendAccount(account: account)
+                UserSessionManager.shared.setCurrentAccount(account: account)
                 self?.auth.onNext(true)
             }, onError: {[weak self] error in
                 self?.handleError(error: error)

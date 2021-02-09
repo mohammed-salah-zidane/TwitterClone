@@ -17,3 +17,14 @@ public struct User: Codable
         self.screenName = screenName
     }
 }
+
+public struct Account: Codable
+{
+    public var user: User
+    public var accessToken: String
+    
+    public init(user: User, accessToken: String) {
+        self.user = user
+        self.accessToken = accessToken
+    }
+}

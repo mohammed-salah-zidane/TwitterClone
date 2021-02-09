@@ -15,10 +15,26 @@ class HomeVM: ViewModel
     var dataManager: DataManager
     var disposeBag: DisposeBag
     var hasFollowersFetched = BehaviorRelay<Bool>(value: false)
-
-    private var followers = [TwitterUser]()
+    var navigateToAuth = BehaviorRelay<Bool>(value: false)
+    var refreshView = BehaviorRelay<Bool>(value: false)
     
+    private var followers = [TwitterUser]()
     private var nextCursor: Int = -1
+    
+    private var accounts: [Account] {
+        return UserSessionManager.shared.accounts ?? []
+    }
+    
+    private var currentUser: User? {
+        return UserSessionManager.shared.currentUser
+    }
+    
+    private var menuItems : [String] {
+        var items = accounts.map({"@\($0.user.screenName ?? "")"})
+        items.append("Add new account".localized)
+        items.append("Log out from all accounts".localized)
+        return items
+    }
     
     public init(
         dataManager: DataManager
@@ -35,6 +51,42 @@ class HomeVM: ViewModel
     
     func getNextCursor() -> Int {
         nextCursor
+    }
+    
+    func getMenuItems() -> [String] {
+        menuItems
+    }
+    
+    func getCurrentUserName() -> String {
+        currentUser?.screenName ?? ""
+    }
+    
+    func selectItemInMenu(index: Int) {
+        guard !(0..<accounts.count ~= index) else {
+            selectAccount(index: index)
+            return
+        }
+        
+        guard index == menuItems.count - 1 else {
+            self.navigateToAuth.accept(true)
+            return
+        }
+        
+        self.signOut()
+    }
+    
+    private func selectAccount(index: Int) {
+        let account = accounts[index]
+        guard account.user.id != currentUser?.id else {
+            return
+        }
+        UserSessionManager.shared.setCurrentAccount(account: account)
+        self.refreshView.accept(true)
+    }
+    
+    private func signOut() {
+        UserSessionManager.shared.signOutAll()
+        self.navigateToAuth.accept(true)
     }
 }
 

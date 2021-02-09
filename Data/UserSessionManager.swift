@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OAuthSwift
 
 public class UserSessionManager: NSObject
 {
@@ -34,7 +35,7 @@ public class UserSessionManager: NSObject
         }
     }
     
-    public var users: [User]?
+    public var accounts: [Account]?
     {
         get {
             AppDefaults.value(forEncoded: UserDefaultsKey.User.multiUsers)
@@ -46,19 +47,20 @@ public class UserSessionManager: NSObject
     }
     
     // MARK: Methods
-    
-    public func appendUser(user: User) {
-        self.users?.append(user)
+    public func appendAccount(account: Account) {
+        var newAccounts: [Account] = accounts ?? []
+        newAccounts = newAccounts.filter({$0.user.id != account.user.id})
+        newAccounts.append(account)
+        AppDefaults.save(value: newAccounts, keyEncoded: UserDefaultsKey.User.multiUsers)
     }
     
-    public func removeUser(user: User) {
-        let filteredUsers = self.users?.filter({$0.id != user.id})
-        self.users = filteredUsers
+    public func setCurrentAccount(account: Account) {
+        self.currentUser = account.user
+        UserTokenManager.addUserToken(account.accessToken)
     }
     
-    public func signOut()
+    public func signOutAll()
     {
-        guard currentUser != nil else { return }
-        currentUser = nil
+        AppDefaults.clear()
     }
 }

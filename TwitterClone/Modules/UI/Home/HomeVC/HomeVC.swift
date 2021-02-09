@@ -41,7 +41,13 @@ class HomeVC: BaseWireframe<HomeVM, Coordinator>  {
         return src
     }()
     
+    private var menu: NavDropMenu!
+    
     //MARK:- LifeCycle
+    override func viewWillAppear(_ animated: Bool) {
+        setupUI()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,15 +58,46 @@ class HomeVC: BaseWireframe<HomeVM, Coordinator>  {
         viewModel
             .hasFollowersFetched
             .asDriver(onErrorJustReturn: false)
+            .drive(onNext:{[weak self] state in
+                guard state else {return}
+                self?.updateDataSrc()
+            }).disposed(by: disposeBag)
+        
+        viewModel
+            .refreshView
+            .asDriver(onErrorJustReturn: false)
+            .drive(onNext:{[weak self] state in
+                guard state else {return}
+                self?.setupUI()
+                self?.pager.start(reset: true)
+            }).disposed(by: disposeBag)
+        
+        viewModel
+            .navigateToAuth
+            .asDriver(onErrorJustReturn: false)
             .drive(onNext:{ state in
                 guard state else {return}
-                self.updateDataSrc()
+                execute(After: 0.2) {[weak self] in
+                    self?.coordinator.auth.navigate(to: .auth, with: .root)
+                }
             }).disposed(by: disposeBag)
+        
     }
     
 }
 
 extension HomeVC {
+    
+    func setupUI() {
+        menu = NavDropMenu()
+        menu.setup(
+            title: viewModel.getCurrentUserName(),
+            items: viewModel.getMenuItems(),
+            navigationItem: navigationItem) {[weak self] selectedIndex in
+            guard let self = self else {return}
+            self.viewModel.selectItemInMenu(index: selectedIndex)
+        }
+    }
     
     func updateDataSrc() {
         self.homeDataSrc.items = viewModel.getFollowers() ?? []
