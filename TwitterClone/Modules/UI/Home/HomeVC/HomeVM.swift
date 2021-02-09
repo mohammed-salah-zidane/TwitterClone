@@ -85,6 +85,7 @@ class HomeVM: ViewModel
     }
     
     private func signOut() {
+        dataManager.homeRepo.localSrc.deleteAllFollowers()
         UserSessionManager.shared.signOutAll()
         self.navigateToAuth.accept(true)
     }
