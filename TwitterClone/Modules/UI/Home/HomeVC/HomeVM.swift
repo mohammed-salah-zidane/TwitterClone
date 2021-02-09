@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class HomeVM: ViewModel
 {
     var isLoading: PublishSubject<Bool>
@@ -98,7 +97,7 @@ extension HomeVM {
             .getFollowers(request: FollowersRequest(screen_name: screenName, cursor: cursor, count: 10))
             .subscribe { [weak self] response in
                 guard let self = self else {return}
-                self.followers.append(contentsOf: response.users ?? [])
+                self.followers.append(contentsOf: response.users?.unique(map: {$0.id}) ?? [])
                 self.nextCursor = response.nextCursor ?? 0
                 self.hasFollowersFetched.accept(true)
             } onError: {[weak self] error in

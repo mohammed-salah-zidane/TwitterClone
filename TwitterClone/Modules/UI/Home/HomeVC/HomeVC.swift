@@ -44,13 +44,9 @@ class HomeVC: BaseWireframe<HomeVM, Coordinator>  {
     private var menu: NavDropMenu!
     
     //MARK:- LifeCycle
-    override func viewWillAppear(_ animated: Bool) {
-        setupUI()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
     }
     
     //MARK:- Ovverides

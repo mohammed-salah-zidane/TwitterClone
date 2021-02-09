@@ -39,4 +39,26 @@ public struct TwitterUser: Codable {
         case friendsCount = "friends_count"
         case verified
     }
+    
+    public init(
+        id: Double? = nil,
+        profileImageURL: String? = nil,
+        userDescription: String? = nil,
+        followersCount: Int? = nil,
+        idStr: String? = nil,
+        name: String? = nil,
+        screenName: String? = nil,
+        friendsCount: Int? = nil,
+        verified: Bool? = nil
+    ) {
+        self.id = id
+        self.profileImageURL = profileImageURL
+        self.userDescription = userDescription
+        self.followersCount = followersCount
+        self.idStr = idStr
+        self.name = name
+        self.screenName = screenName
+        self.friendsCount = friendsCount
+        self.verified = verified
+    }
 }

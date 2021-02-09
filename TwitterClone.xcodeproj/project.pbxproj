@@ -138,6 +138,8 @@
 		FA7EC1BF2584B95E00B7FD4E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C12584B95E00B7FD4E /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C32584B95E00B7FD4E /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAC8FA025D28913002BC1E2 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAC8FA125D28913002BC1E2 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAEDB4625CF55EB00648C4C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		FAAEDB4E25CF561000648C4C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FAAEDB5225CF562000648C4C /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
@@ -181,6 +183,8 @@
 		1525079DE10F311B9F97117C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAAC8FA025D28913002BC1E2 /* Realm.framework */,
+				FAAC8FA125D28913002BC1E2 /* RealmSwift.framework */,
 				FA7EC1BF2584B95E00B7FD4E /* Core.framework */,
 				FA7EC1C12584B95E00B7FD4E /* Data.framework */,
 				FA7EC1C32584B95E00B7FD4E /* Presentation.framework */,

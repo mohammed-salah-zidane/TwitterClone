@@ -21,6 +21,11 @@ PODS:
   - OAuthSwift (2.1.0)
   - PanModal (1.2.7)
   - ReachabilitySwift (4.3.1)
+  - Realm (10.5.0):
+    - Realm/Headers (= 10.5.0)
+  - Realm/Headers (10.5.0)
+  - RealmSwift (10.5.0):
+    - Realm (= 10.5.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -56,6 +61,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - OAuthSwift
   - PanModal
+  - RealmSwift
   - RxCocoa
   - RxReachability
   - RxRequester/Moya
@@ -83,6 +89,8 @@ SPEC REPOS:
     - OAuthSwift
     - PanModal
     - ReachabilitySwift
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxReachability
     - RxRelay
@@ -110,6 +118,8 @@ SPEC CHECKSUMS:
   OAuthSwift: ab1675598273e04355e0282459c328e65c9ddacd
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  Realm: e1c22c3d83b229afb70ebc10e1771c91e9542d12
+  RealmSwift: 6fc078d9d3fd7e58c71bfdbb694e252462f112a5
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxReachability: 21d3e96f39bc166a21c357e923f47dec148ca97b
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -122,6 +132,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 73bdec0a80f7c68e8900fa38a4ec0e9e2c6e74ab
+PODFILE CHECKSUM: c7d86cdea63ec0aa443a371c15a2e8e20d9291a6
 
 COCOAPODS: 1.10.0

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		FA7EBF262584916600B7FD4E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EBF1C2584916500B7FD4E /* Core.framework */; };
 		FA7EBF2B2584916600B7FD4E /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EBF2A2584916600B7FD4E /* CoreTests.swift */; };
 		FA7EBF2D2584916600B7FD4E /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = FA7EBF1F2584916500B7FD4E /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAAC905925D2A543002BC1E2 /* Array+Unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC905825D2A543002BC1E2 /* Array+Unique.swift */; };
 		FAAD103925A34C13005E4FCA /* ExecuteAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD103825A34C13005E4FCA /* ExecuteAfter.swift */; };
 		FADAC9AE25D0CC4E008D0ADD /* NotificationsName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC9AD25D0CC4E008D0ADD /* NotificationsName+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		FA7EBF2C2584916600B7FD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA7EC1CA2584BA8B00B7FD4E /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1CB2584BA8B00B7FD4E /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAC905825D2A543002BC1E2 /* Array+Unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Unique.swift"; sourceTree = "<group>"; };
 		FAAD103825A34C13005E4FCA /* ExecuteAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteAfter.swift; sourceTree = "<group>"; };
 		FADAC9AD25D0CC4E008D0ADD /* NotificationsName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationsName+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				FADAC9AD25D0CC4E008D0ADD /* NotificationsName+Extension.swift */,
+				FAAC905825D2A543002BC1E2 /* Array+Unique.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				FADAC9AE25D0CC4E008D0ADD /* NotificationsName+Extension.swift in Sources */,
 				FAAD103925A34C13005E4FCA /* ExecuteAfter.swift in Sources */,
 				FA3C741F25863BD5002014DD /* KeyboardManager.swift in Sources */,
+				FAAC905925D2A543002BC1E2 /* Array+Unique.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

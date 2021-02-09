@@ -11,18 +11,60 @@ import RxCocoa
 public class HomeRepo {
     
     public let remoteDataSrc: HomeRemoteDataSrc
+    public let localSrc: HomeLocalDataSrc
+    private let disposeBag = DisposeBag()
     
-    public static func create() -> HomeRepo {
-        let homeAPI: MoyaProvider<HomeAPI> = MoyaProviderBuilder.makeProvider()
-        let homeRemoteDataSrc = HomeRemoteDataSrc(api: homeAPI)
-        return HomeRepo(remote: homeRemoteDataSrc)
-    }
-    
-    public init(remote: HomeRemoteDataSrc) {
+    public init(remote: HomeRemoteDataSrc, localSrc: HomeLocalDataSrc) {
         self.remoteDataSrc = remote
+        self.localSrc = localSrc
     }
     
     public func getFollowers(request: FollowersRequest) -> Single<FollowersResponse> {
-        remoteDataSrc.followers(request: request)
+        Single<FollowersResponse>.create { single in
+            self.remoteDataSrc.followers(request: request).subscribe { response in
+                
+                if response.users?.isEmpty == true {
+                    self.getLocalFollwers { follwers in
+                        single(.success(FollowersResponse(users: follwers, nextCursor: 0)))
+                    }
+                }
+                
+                self.save(users: response.users ?? []).subscribe {
+                    single(.success(response))
+                } onError: { error in
+                    print("error")
+                }.disposed(by: self.disposeBag)
+                
+            } onError: { error in
+                self.getLocalFollwers { follwers in
+                    single(.success(FollowersResponse(users: follwers, nextCursor: 0)))
+                }
+            }.disposed(by: self.disposeBag)
+            return Disposables.create()
+        }
+    }
+    
+    @discardableResult
+    public func save(users: [TwitterUser]) -> Completable {
+        localSrc.save(users: users)
+    }
+    
+    public func getLocalFollwers(_ completion:@escaping ([TwitterUser]) -> Void) {
+        localSrc.all()
+            .subscribe { followers in
+                completion(followers?.reversed() ?? [])
+            } onError: { error in
+                print(error)
+                completion([])
+            }.disposed(by: disposeBag)
+    }
+}
+
+extension HomeRepo {
+    public static func create() -> HomeRepo {
+        let homeAPI: MoyaProvider<HomeAPI> = MoyaProviderBuilder.makeProvider()
+        let homeRemoteDataSrc = HomeRemoteDataSrc(api: homeAPI)
+        let localDataSrc = HomeLocalDataSrc(db: FollowerDao())
+        return HomeRepo(remote: homeRemoteDataSrc, localSrc: localDataSrc)
     }
 }

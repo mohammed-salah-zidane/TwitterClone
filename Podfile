@@ -15,6 +15,7 @@ def core_pods
   pod 'RxRequester/Moya'
   pod 'ModelsMapper'
   pod 'SwiftyJSON'
+  pod 'RealmSwift'
 end
 
 
@@ -55,7 +56,7 @@ target 'Data' do
   use_frameworks!
   project 'Data/Data.project'
   data_pods
-  
+
 end
 
 #app module
