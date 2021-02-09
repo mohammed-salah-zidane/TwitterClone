@@ -73,7 +73,7 @@ class HomeVC: BaseWireframe<HomeVM, Coordinator>  {
             .asDriver(onErrorJustReturn: false)
             .drive(onNext:{ state in
                 guard state else {return}
-                execute(After: 0.2) {[weak self] in
+                execute(After: 0.3) {[weak self] in
                     self?.coordinator.auth.navigate(to: .auth, with: .root)
                 }
             }).disposed(by: disposeBag)
@@ -83,7 +83,6 @@ class HomeVC: BaseWireframe<HomeVM, Coordinator>  {
 }
 
 extension HomeVC {
-    
     func setupUI() {
         menu = NavDropMenu()
         menu.setup(

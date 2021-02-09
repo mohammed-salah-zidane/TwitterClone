@@ -29,4 +29,8 @@ public class HomeLocalDataSrc {
         let entities = ListMapper(UserEntityMapper()).map(users ?? [])
         return db.add(users: entities)
     }
+    
+    public func deleteAllFollowers() {
+        db.deleteAll()
+    }
 }

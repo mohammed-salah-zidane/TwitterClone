@@ -25,4 +25,8 @@ public class FollowerDao {
     public func follower(userId: String) -> Single<UserEntity> {
         realm.object(forPrimaryKey: userId)
     }
+    
+    public func deleteAll() {
+        realm.deleteAll()
+    }
 }

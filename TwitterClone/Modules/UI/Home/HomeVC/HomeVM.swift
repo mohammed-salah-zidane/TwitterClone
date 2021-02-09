@@ -80,6 +80,7 @@ class HomeVM: ViewModel
             return
         }
         UserSessionManager.shared.setCurrentAccount(account: account)
+        dataManager.homeRepo.localSrc.deleteAllFollowers()
         self.refreshView.accept(true)
     }
     
@@ -92,16 +93,25 @@ class HomeVM: ViewModel
 extension HomeVM {
     func getFollowers(cursor: Int = -1) {
         let screenName = UserSessionManager.shared.currentUser?.screenName ?? ""
+        self.nextCursor = cursor
         dataManager
             .homeRepo
             .getFollowers(request: FollowersRequest(screen_name: screenName, cursor: cursor, count: 10))
             .subscribe { [weak self] response in
                 guard let self = self else {return}
-                self.followers.append(contentsOf: response.users?.unique(map: {$0.id}) ?? [])
+                self.updateFollowersList(users: response.users ?? [])
                 self.nextCursor = response.nextCursor ?? 0
                 self.hasFollowersFetched.accept(true)
             } onError: {[weak self] error in
                 self?.handleError(error: error)
             }.disposed(by: disposeBag)
+    }
+    
+    private func updateFollowersList(users: [TwitterUser]) {
+        guard nextCursor != -1 else {
+            self.followers = users.unique(map: {$0.id})
+            return
+        }
+        self.followers.append(contentsOf: users.unique(map: {$0.id}))
     }
 }

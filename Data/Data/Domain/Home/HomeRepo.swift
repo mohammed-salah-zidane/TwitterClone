@@ -22,13 +22,6 @@ public class HomeRepo {
     public func getFollowers(request: FollowersRequest) -> Single<FollowersResponse> {
         Single<FollowersResponse>.create { single in
             self.remoteDataSrc.followers(request: request).subscribe { response in
-                
-                if response.users?.isEmpty == true {
-                    self.getLocalFollwers { follwers in
-                        single(.success(FollowersResponse(users: follwers, nextCursor: 0)))
-                    }
-                }
-                
                 self.save(users: response.users ?? []).subscribe {
                     single(.success(response))
                 } onError: { error in
@@ -57,6 +50,10 @@ public class HomeRepo {
                 print(error)
                 completion([])
             }.disposed(by: disposeBag)
+    }
+    
+    public func deleteAllFollowers() {
+        localSrc.deleteAllFollowers()
     }
 }
 
