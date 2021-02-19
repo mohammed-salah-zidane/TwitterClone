@@ -7,7 +7,7 @@ TwitterClone app represents a real world client app twitter example: it provides
 
 ## Modular Architecture
  
- <img src="https://github.com/mohammed-salah-zidane/TwitterClone/blob/master/blob/modular-arch-diagram.png" height="600">
+ <img src="https://github.com/mohammed-salah-zidane/TwitterClone/blob/main/blob/modular-arch-diagram.png" height="600">
  
  ### 🛡 License
 <details>
