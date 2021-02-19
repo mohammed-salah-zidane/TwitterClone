@@ -5,13 +5,14 @@ TwitterClient  app represents a real world client app twitter example: it provid
 # Implemented Using
 
 * MVVM with RxSwift
-* RxMoya for Networing
+* RxMoya for Netwokring
 * Coordinators (Navigators) pattern for app flow
 * Modular Archicture (App, Data, Core, Presentation)
 * Many Design patterns (Builder, Repository, Singletone, Strategy... etc )
 * Storyboards, Nib files and programmatically for design the views
 * Realm Database
 * OAuthSwift
+* Twitter API
 * Self Imlemented reusable componants(Pager Table View with refresher, Image Zoom Preview,...etc ) 
  
 # Review Demo Video
