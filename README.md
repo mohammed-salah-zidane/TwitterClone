@@ -1,19 +1,20 @@
 # Twitter Client iOS App
 
-TwitterClone app represents a real world client app twitter example: it provides a fairly complex set of functionalities, it's a suitable showcase for all the advantages that architecture components bring, has all features that would make it a modular, scalable, testable and maintainable app.
+TwitterClient  app represents a real world client app twitter example: it provides a fairly complex set of functionalities, it's a suitable showcase for all the advantages that architecture components bring, has all features that would make it a modular, scalable, testable and maintainable app.
 
 # Implemented Using
 
 * MVVM with RxSwift
 * RxMoya for Networing
 * Coordinators (Navigators) pattern for app flow
-* Realm Database
 * Modular Archicture (App, Data, Core, Presentation)
 * Many Design patterns (Builder, Repository, Singletone, Strategy... etc )
-* Storyboards, Nib files and also programmatically for design the views
-* Self Imlemented resulable componants(Pager Table View with refresher, Image Zoom Preview,...etc ) 
+* Storyboards, Nib files and programmatically for design the views
+* Realm Database
+* OAuthSwift
+* Self Imlemented reusable componants(Pager Table View with refresher, Image Zoom Preview,...etc ) 
  
- # Review Demo Video
+# Review Demo Video
  [![Video Demo](https://github.com/mohammed-salah-zidane/TwitterClone/blob/main/blob/twitterClient.jpeg)](https://www.youtube.com/watch?v=WLxbBARMAbQ)
  
 # App Features
