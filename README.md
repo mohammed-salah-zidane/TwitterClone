@@ -14,7 +14,7 @@ TwitterClone app represents a real world client app twitter example: it provides
 * Self Imlemented resulable componants(Pager Table View with refresher, Image Zoom Preview,...etc ) 
  
  # Demo
- [![Video Demo](https://github.com/mohammed-salah-zidane/TwitterClone/blob/main/blob/twitterClient.png)](https://www.youtube.com/watch?v=WLxbBARMAbQ)
+ [![Video Demo](https://github.com/mohammed-salah-zidane/TwitterClone/blob/main/blob/twitterClient.jpeg)](https://www.youtube.com/watch?v=WLxbBARMAbQ)
  
 ## App Features
 
