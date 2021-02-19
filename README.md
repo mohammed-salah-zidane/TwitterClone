@@ -4,27 +4,31 @@ TwitterClone app represents a real world client app twitter example: it provides
 
 # Implemented Using
 
-* MVVM with RXSWIFT
-* RXMoya for Networing
-* Coordinator (Navigators) pattern for app flow
+* MVVM with RxSwift
+* RxMoya for Networing
+* Coordinators (Navigators) pattern for app flow
 * Realm Database
 * Modular Archicture (App, Data, Core, Presentation)
 * Many Design patterns (Builder, Repository, Singletone, Strategy... etc )
-* Storyboards, Nib files and also programmatically for design
+* Storyboards, Nib files and also programmatically for design the views
 * Self Imlemented resulable componants(Pager Table View with refresher, Image Zoom Preview,...etc ) 
  
- # Demo
+ # Review Demo Video
  [![Video Demo](https://github.com/mohammed-salah-zidane/TwitterClone/blob/main/blob/twitterClient.jpeg)](https://www.youtube.com/watch?v=WLxbBARMAbQ)
  
-## App Features
+# App Features
 
 * Login with Twitter
 * Add and switch betweeen multiple twitter accounts
 * Load user follwers with pagination
 * Offline Caching for the followers
- 
- ## Modular Architecture
-  
+
+# Usage
+
+Pull or download the repo after that make Install Pods then you can run on a real device because some freamworks added for real devices
+
+## Modular Architecture
+
   <img src="https://github.com/mohammed-salah-zidane/TwitterClone/blob/main/blob/modular-arch-diagram.png" height="600">
  
  ### 🛡 License
