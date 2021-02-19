@@ -25,9 +25,13 @@ TwitterClone app represents a real world client app twitter example: it provides
 
 # Usage
 
-Pull or download the repo after that make Install Pods then you can run on a real device because some freamworks added for real devices
+Pull or download the repo after that make  'pod install' command then you can run and build on a real device because some static freamworks added for real devices.
 
-## Modular Architecture
+# Note
+The Twitter API key have a limited requests so it may stop to return user followers, if this happened you have to change twitter api credentials.
+
+
+# Modular Architecture
 
   <img src="https://github.com/mohammed-salah-zidane/TwitterClone/blob/main/blob/modular-arch-diagram.png" height="600">
  
