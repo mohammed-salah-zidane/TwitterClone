@@ -1,19 +1,20 @@
 # Twitter Client iOS App
 
-TwitterClient  app represents a real world client app twitter example: it provides a fairly complex set of functionalities, it's a suitable showcase for all the advantages that architecture components bring, has all features that would make it a modular, scalable, testable and maintainable app.
+TwitterClient  app represents a real world twitter client app: it provides a fairly complex set of functionalities, it's a suitable showcase for all the advantages that architecture components bring, has all features that would make it a modular, scalable, testable and maintainable app.
 
 # Implemented Using
 
 * MVVM with RxSwift
-* RxMoya for Netwokring
+* RxMoya for netwokring
 * Coordinators (Navigators) pattern for app flow
 * Modular Archicture (App, Data, Core, Presentation)
-* Many Design patterns (Builder, Repository, Singletone, Strategy... etc )
+* Many design patterns (Builder, Factory, Repository, Singletone, Strategy, ...etc)
+* SOLID Principles
 * Storyboards, Nib files and programmatically for design the views
 * Realm Database
 * OAuthSwift
 * Twitter API
-* Self Imlemented reusable componants(Pager Table View with refresher, Image Zoom Preview,...etc ) 
+* Self implemented reusable componants (Pager Table View with refresher, Image zoom preview, ...etc) 
  
 # Review Demo Video
  [![Video Demo](https://github.com/mohammed-salah-zidane/TwitterClone/blob/main/blob/twitterClient.jpeg)](https://www.youtube.com/watch?v=WLxbBARMAbQ)
