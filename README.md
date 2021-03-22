@@ -28,7 +28,7 @@ TwitterClient  app represents a real world twitter client app: it provides a fai
 
 # Usage
 
-Pull or download the repo after that make  'pod install' command then you can run and build on a real device because some static freamworks added for real devices.
+Pull or download the repo after that make  'pod install' command then you can run.
 
 # Note
 The Twitter API key have a limited requests so it may stop to return user followers, if this happened you have to change twitter api credentials.
