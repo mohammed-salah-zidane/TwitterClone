@@ -29,8 +29,8 @@
 		FAAC903E25D29002002BC1E2 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC903D25D29002002BC1E2 /* UserEntity.swift */; };
 		FAAC904425D2904F002BC1E2 /* FollowerDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC904325D2904F002BC1E2 /* FollowerDao.swift */; };
 		FAAC904B25D290C6002BC1E2 /* HomeLocalDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC904A25D290C6002BC1E2 /* HomeLocalDataSrc.swift */; };
-		FAAC905225D29A0D002BC1E2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAC905025D29A0D002BC1E2 /* Realm.framework */; platformFilter = ios; };
-		FAAC905325D29A0D002BC1E2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAC905125D29A0D002BC1E2 /* RealmSwift.framework */; platformFilter = ios; };
+		FAB709A426092D7300E08658 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB709A226092D7300E08658 /* Realm.framework */; platformFilter = ios; };
+		FAB709A626092D7300E08658 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB709A326092D7300E08658 /* RealmSwift.framework */; platformFilter = ios; };
 		FADAC99F25D0C08E008D0ADD /* FollowersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC99E25D0C08E008D0ADD /* FollowersRequest.swift */; };
 		FADAC9A325D0C510008D0ADD /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC9A225D0C510008D0ADD /* AuthAPI.swift */; };
 		FADAC9A725D0C742008D0ADD /* AuthRemoteDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAC9A625D0C742008D0ADD /* AuthRemoteDataSrc.swift */; };
@@ -89,6 +89,8 @@
 		FAAC904A25D290C6002BC1E2 /* HomeLocalDataSrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocalDataSrc.swift; sourceTree = "<group>"; };
 		FAAC905025D29A0D002BC1E2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		FAAC905125D29A0D002BC1E2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		FAB709A226092D7300E08658 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../../../../Desktop/Realm.framework; sourceTree = "<group>"; };
+		FAB709A326092D7300E08658 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = ../../../../Desktop/RealmSwift.framework; sourceTree = "<group>"; };
 		FADAC99E25D0C08E008D0ADD /* FollowersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersRequest.swift; sourceTree = "<group>"; };
 		FADAC9A225D0C510008D0ADD /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		FADAC9A625D0C742008D0ADD /* AuthRemoteDataSrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDataSrc.swift; sourceTree = "<group>"; };
@@ -111,9 +113,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAC905225D29A0D002BC1E2 /* Realm.framework in Frameworks */,
+				FAB709A426092D7300E08658 /* Realm.framework in Frameworks */,
 				554C120C4569B419AEF85885 /* Pods_Data.framework in Frameworks */,
-				FAAC905325D29A0D002BC1E2 /* RealmSwift.framework in Frameworks */,
+				FAB709A626092D7300E08658 /* RealmSwift.framework in Frameworks */,
 				FA3C711F2585F286002014DD /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +136,8 @@
 			children = (
 				FAAC905025D29A0D002BC1E2 /* Realm.framework */,
 				FAAC905125D29A0D002BC1E2 /* RealmSwift.framework */,
+				FAB709A226092D7300E08658 /* Realm.framework */,
+				FAB709A326092D7300E08658 /* RealmSwift.framework */,
 				FA8EA29925855813001B04E0 /* Presentation.framework */,
 				FA8EA28C258557E2001B04E0 /* Core.framework */,
 				C8660D6C1B79E6FA727CE519 /* Pods_Data.framework */,
@@ -671,6 +675,7 @@
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -702,6 +707,7 @@
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

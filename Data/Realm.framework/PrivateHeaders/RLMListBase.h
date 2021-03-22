@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class RLMArray, RLMObjectBase, RLMResults, RLMProperty, RLMLinkingObjects;
+@class RLMArray, RLMObjectBase, RLMResults, RLMProperty;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,10 +33,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RLMLinkingObjectsHandle : NSObject
 - (instancetype)initWithObject:(RLMObjectBase *)object property:(RLMProperty *)property;
-- (instancetype)initWithLinkingObjects:(RLMResults *)linkingObjects;
-- (instancetype)freeze;
 
-@property (nonatomic, readonly) RLMLinkingObjects *results;
+@property (nonatomic, readonly) RLMResults *results;
+@property (nonatomic, readonly) RLMObjectBase *parent;
+@property (nonatomic, readonly) RLMProperty *property;
 @end
 
 NS_ASSUME_NONNULL_END

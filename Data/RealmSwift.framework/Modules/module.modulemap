@@ -1,11 +1,4 @@
 framework module RealmSwift {
-  umbrella header "RealmSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}
-
-module RealmSwift.Swift {
-    header "RealmSwift-Swift.h"
-    requires objc
+  header "RealmSwift-Swift.h"
+  requires objc
 }
